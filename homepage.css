@@ -8,7 +8,7 @@
 .home-window{
     background: #FFFCE1;
     height: 600px;
-    width: 800px;
+    width: 780px;
     display: flex;
     flex-direction: column;
     border-radius: 30px;
@@ -76,7 +76,7 @@
 .home-window-buttons button{
     font-size: 40px !important;
     padding: 10px;
-    border-radius: 25px;
+    border-radius: 50px;
     border: 5px solid black;
     background: white;
     box-shadow: 5px 5px 0px black ;
@@ -90,4 +90,35 @@
 }
 .home-window-buttons .button2{
     background: #48ECE2;
+}
+ 
+.home-window-bg{
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    z-index: -1;
+    width: 1180px;
+}
+.home-window-bg img{
+    height: 200px;
+}
+.home-window-bg .img1{
+    
+}
+.home-window-bg .img2{
+    
+}
+.home-window-bg .img3{
+    
+}
+.home-window-bg .img4{
+    
+}
+.home-window-bg .img5{
+    
+}
+.home-window-bg .img6{
+    
 }
