@@ -6,38 +6,62 @@
     font-family: 'Poppins', sans-serif;
     scroll-behavior:smooth;
     box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+    color: rgb(0, 0, 0);
     /* adjust the font weight and size by yourself in every element */
 }
 
-body{
+::-webkit-scrollbar {
+    display: none;
+}
 
+body{
+    background-color: #FFEFE3;
 }
 
 a,button{
     text-decoration: none;
     cursor: pointer;
 }
+
 ul{
     list-style: none;
 }
 
-header{
-    display: flex;
+
+header {
+    position: fixed;
     background: var(--bg-color);
-    margin: 30px;
+    width: 1400px;
+    margin: 25px auto 0;
     border-radius: 45px;
     border: 4px solid black;
-    padding: 10px;
-    height: 110px;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
     box-sizing: border-box;
     align-items: center;
-}
-header img{
-    height: 75px;
-    padding-left: 15px;
-    padding-right: 25px;
+  }
+  
+  .header-content {
+    font-weight: 500;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 20px;
+    max-width: 1360px;
+    width: 100%;
+  }
+
+ .logo-links{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+ }
+
+.header-content img{
+    height: 70px;
+   
+    padding-right: 35px;
 }
 
 .nav-list{
@@ -45,17 +69,15 @@ header img{
     gap: 20px;
 }
 .nav-list a{
-    color: black;
     font-size: 24px;
 }
 .header-nav-buttons{
-    float: right;
-    margin-left: auto;
+    /* margin-left: auto; */
+    
     display: flex;
     gap: 10px;
 }
 .header-nav-buttons button{
-    font-size: 25px;
     padding: 10px;
     border-radius: 25px;
     border: 5px solid black;
@@ -77,12 +99,9 @@ header img{
 }
 
 
-
-
 /* ------------------footer---------- */
 
 footer{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     bottom: 0;
     display: flex;
     width: auto;
@@ -126,10 +145,10 @@ footer{
     font-size: 20px;
     border: 5px solid black;
 }
-/* their div */
+/* their div
 .email-and-button{ 
-/* this */
-}
+    /* this }*/
+
 .email-and-button button{
     width: 50px;
     height: 50px;
