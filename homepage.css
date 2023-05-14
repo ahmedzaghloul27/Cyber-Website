@@ -3,9 +3,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
-
+    padding-top:250px;
+    margin-bottom: 100px;
 }
 .home-window{
+    position: absolute ;
+    /* top: -1000px; ------------------ */
     background: #FFFCE1;
     height: 600px;
     width: 780px;
@@ -51,7 +54,6 @@
 
 .home-window-body{
     position: relative;
-    /* background-image: url("Images/home-window.svg"); */
     padding: 50px;
     display: flex;
     flex-direction: column;
@@ -102,7 +104,10 @@
     width: 1180px;
 }
 .home-window-bg img{
+    /* position: absolute------------------;
+    left: 350px; */
     height: 200px;
+    transition: top 1s;
 }
 .home-window-bg .img1{
     
