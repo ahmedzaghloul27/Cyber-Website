@@ -15,7 +15,7 @@ ul{
 
 
 
-.header-container{
+header{
     display: flex;
     background: var(--bg-color);
     margin: 30px;
@@ -32,11 +32,11 @@ ul{
     padding-right: 25px;
 }
 
-.header-nav-list{
+.nav-list{
     display: flex;
     gap: 20px;
 }
-.header-nav-list a{
+.nav-list a{
     color: black;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 24px;
@@ -72,3 +72,59 @@ ul{
 
 
 
+/* ------------------footer---------- */
+
+footer{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    bottom: 0;
+    display: flex;
+    width: auto;
+    margin: 30px;
+    background: red;
+    height: 180px;
+    box-shadow: -20px 20px 2px black;
+}
+.footer-left-side{
+    background: var(--bg-color);
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    padding: 30px;
+    border: 5px solid black;
+    border-right: 2.7px solid;
+    align-items: center;
+    justify-content: center;
+}
+.footer-left-side img{
+    height: 80px;
+}
+.footer-right-side{
+    background: #FF87AB;
+    width: 100%;
+    padding: 30px;
+    border: 5px solid black;
+    border-left: 2.7px solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 10px;
+}
+.footer-right-side h1{
+    margin: 0;
+}
+.email-and-button input[type=email]{
+    height: auto;
+    width: 80%;
+    padding: 10px;
+    font-size: 20px;
+    border: 5px solid black;
+}
+/* their div */
+.email-and-button{ 
+/* this */
+}
+.email-and-button button{
+    width: 50px;
+    height: 50px;
+    /* this */
+}
