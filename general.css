@@ -8,11 +8,17 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    color: rgb(0, 0, 0);
     /* adjust the font weight and size by yourself in every element */
 }
 
-body{
+/* ::-webkit-scrollbar {
+    display: none;
+} */
 
+body{
+    background-color: #FFEFE3;
+    font-size: 28px;
 }
 
 a,button{
@@ -45,7 +51,6 @@ header img{
     gap: 20px;
 }
 .nav-list a{
-    color: black;
     font-size: 24px;
 }
 .header-nav-buttons{
@@ -82,7 +87,6 @@ header img{
 /* ------------------footer---------- */
 
 footer{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     bottom: 0;
     display: flex;
     width: auto;
