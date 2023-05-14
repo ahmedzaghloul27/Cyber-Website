@@ -23,9 +23,6 @@ ul{
     list-style: none;
 }
 
-.header-container{
-
-
 header{
     display: flex;
     background: var(--bg-color);
@@ -37,7 +34,7 @@ header{
     box-sizing: border-box;
     align-items: center;
 }
-.header-container img{
+header img{
     height: 75px;
     padding-left: 15px;
     padding-right: 25px;
