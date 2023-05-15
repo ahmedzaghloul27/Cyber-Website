@@ -74,8 +74,9 @@ header a,button{
     font-weight: 500;
   }
 header img{
+    margin-top: 15px;
     height: 60px;
-    }
+}
 a,button{
     text-decoration: none;
     cursor: pointer;
