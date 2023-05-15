@@ -101,7 +101,7 @@
     align-items: center;
     justify-content: center;
     padding-top:250px;
-    margin-bottom: 100px;
+    margin-bottom: 205px;
 }
 .home-window{
     animation: home-window 3s ease-in forwards;
@@ -179,15 +179,19 @@
     background: white;
     box-shadow: 5px 5px 0px black ;
 }
-.home-window-buttons button:hover{
-    background: darkgrey;
+.home-window-buttons .button1:hover{
+    background: rgb(196, 214, 0);
+    transition: background .5s;
+}
+.home-window-buttons .button2:hover{
+    background: rgb(0, 189, 107);
     transition: background .5s;
 }
 .home-window-buttons .button1{
-    background: #C05435;
+    background: #FFEC42;
 }
 .home-window-buttons .button2{
-    background: #48ECE2;
+    background: #C5FFA8;
 }
  
 .home-window-bg{
