@@ -27,6 +27,20 @@ body{
     min-height: 100vh;
     
 }
+.screen{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 100px;
+}
+.hover-effect:hover{
+    top: -5px;
+    left: -5px;
+    transition: all .5s;
+    box-shadow: 5px 5px 0px black ;
+
+}
 
 .header-container {
     display: flex;
@@ -117,6 +131,44 @@ ul{
     background: #55ff00 !important;
 }
 
+/* ---------------------social icons---------------- */
+.social-container{
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+}
+.social-icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* overflow: hidden; */
+}
+.social-icon span{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(254, 222, 247);
+    height: 80px;
+    width: 83px;
+    font-size: 50px;
+    z-index: 1;
+    border: 1px solid black;
+    top: -10;
+    left: -5;
+}
+.social-icon img{
+    position: absolute;
+    height: 100px !important;
+}
+.social-icon span:hover{
+    top: -15;
+    left: -12;
+    transition: all .5s;
+}
+
 
 /* ------------------footer---------- */
 .footer-container{
@@ -188,10 +240,10 @@ font-weight: 400;
 }
 
 .email-and-button{
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 15px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
 }
 
 
