@@ -43,3 +43,21 @@ let homeWindowBgImages = document.querySelectorAll('.home-window-bg img');
     };
     window.addEventListener('scroll', checkScroll);
   })();
+
+
+  let arrowRight = document.querySelectorAll('.genre-container .right-arrow');
+  let arrowLeft = document.querySelectorAll('.genre-container .left-arrow');
+  let gameContainer = document.querySelectorAll('.game-card-container');
+  let gameCard = document.querySelector('.game-card-container .game-card');
+  
+for (let i = 0; i < gameContainer.length; i++) {
+    arrowRight[i].addEventListener('click', ()=>{
+        const slideWidth = gameCard.clientWidth;
+        gameContainer[i].scrollLeft += slideWidth;
+    })
+    arrowLeft[i].addEventListener('click', ()=>{
+        const slideWidth = gameCard.clientWidth;
+        gameContainer[i].scrollLeft -= slideWidth;
+    });
+};
+  

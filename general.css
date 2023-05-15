@@ -1,15 +1,15 @@
 @font-face {
-    font-family:montras;
+    font-family: montras;
     src: url(css/MontrasDisplay.otf);
 }
 
-:root{
-    --bg-color:#FFEE50;
+:root {
+    --bg-color: #FFEE50;
 }
 
-*{
+* {
     font-family: 'Poppins', sans-serif;
-    scroll-behavior:smooth;
+    scroll-behavior: smooth;
     box-sizing: border-box;
     color: rgb(0, 0, 0);
     margin: 0;
@@ -18,24 +18,26 @@
 }
 
 
-body{
+body {
     background-color: #FFEFE3;
-    position: relative; 
+    position: relative;
     min-height: 100vh;
-    
+
 }
-.screen{
-    height:800px;
+
+.screen {
+    height: 800px;
     display: flex;
     align-items: center;
     justify-content: center;
     margin-bottom: 100px;
 }
-.hover-effect:hover{
+
+.hover-effect:hover {
     top: -5px;
     left: -5px;
     transition: all .5s;
-    box-shadow: 5px 5px 0px black ;
+    box-shadow: 5px 5px 0px black;
 
 }
 
@@ -45,14 +47,15 @@ body{
     justify-content: center;
     height: 100px;
     margin: 20px 0 60px 0;
-    
-  }
+
+}
 
 #header {
     position: fixed;
     z-index: 100;
     background: var(--bg-color);
-    width: 1400px;
+    width: 90%;
+    min-width: 1200px;
     border-radius: 45px;
     border: 4.5px solid black;
     height: 95px;
@@ -61,84 +64,97 @@ body{
     align-content: center;
     box-sizing: border-box;
     align-items: center;
-    padding: 0px 25px 0px 25px ;
+    padding: 0px 25px 0px 25px;
     top: 30px;
     transition: top 0.6s ease-in-out;
-  }
-#header.hide{
+}
+
+#header.hide {
     top: -80px;
     transition: top 0.6s ease-in-out;
-  }
-header a,button{
+}
+
+header a,
+button {
     font-size: 23px;
     font-weight: 500;
-  }
-header img{
-    margin-top: 15px;
+}
+
+header img {
+    margin-top: 10px;
     height: 60px;
 }
-a,button{
+
+a,
+button {
     text-decoration: none;
     cursor: pointer;
 }
-ul{
+
+ul {
     list-style: none;
     padding: 0px;
 }
 
-.logo-links{
+.logo-links {
     display: flex;
     flex-direction: row;
     align-items: center;
     gap: 35px;
 }
 
-.nav-list{
+.nav-list {
     display: flex;
     gap: 20px;
 }
 
-.header-nav-buttons{
+.header-nav-buttons {
     display: flex;
     gap: 21px;
 }
 
-.header-nav-buttons button{
+.header-nav-buttons button {
     padding: 8px 12px 8px 12px;
     border-radius: 25px;
     border: 5px solid black;
     background: white;
 }
-.header-nav-buttons button:hover{
+
+.header-nav-buttons button:hover {
     background: darkgrey;
     transition: background .5s;
 }
-.header-nav-list a:hover{
+
+.header-nav-list a:hover {
     color: #3ba904;
     transition: color .5s;
 }
-.request-game-button{
+
+.request-game-button {
     background: #C5FFA8 !important;
 }
-.request-game-button:hover{
+
+.request-game-button:hover {
     background: #55ff00 !important;
 }
 
 /* ---------------------social icons---------------- */
-.social-container{
+.social-container {
     flex-direction: row;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 25px;
 }
-.social-icon{
+
+.social-icon {
     display: flex;
     align-items: center;
     justify-content: center;
     /* overflow: hidden; */
 }
-.social-icon span{
+
+.social-icon span {
     position: relative;
     display: flex;
     justify-content: center;
@@ -153,11 +169,13 @@ ul{
     left: -5px;
     transition: all .3s;
 }
-.social-icon img{
+
+.social-icon img {
     position: absolute;
     height: 100px !important;
 }
-.social-icon span:hover{
+
+.social-icon span:hover {
     top: -15px;
     left: -12px;
     transition: all .3s;
@@ -168,7 +186,7 @@ width: 76.7px;
 top: -12.5px;
 left: -8.4px; */
 /* ------------------footer---------- */
-.footer-container{
+.footer-container {
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -177,40 +195,40 @@ left: -8.4px; */
     margin: 60px 0 35px 0;
 }
 
-.footer-container img{
+.footer-container img {
     height: 50px;
 }
 
-footer{
+footer {
     display: flex;
-    width: 1400px;
+    min-width: 1200px;
     background: red;
     height: 130px;
     box-shadow: -10px 12px 0px 3px #000000;
 }
 
-footer a{
-font-size: 20px;
-font-weight: 400;
+footer a {
+    font-size: 20px;
+    font-weight: 400;
 }
 
-.footer-left-side{
+.footer-left-side {
     background: var(--bg-color);
     display: flex;
     gap: 40px;
     padding-left: 30px;
-    width:750px;
+    width: 750px;
     border: 5px solid black;
     border-right: 2.7px solid;
     align-items: center;
     justify-content: flex-start;
 }
 
-.footer-left-side img{
+.footer-left-side img {
     height: 60px;
 }
 
-.footer-right-side{
+.footer-right-side {
     background: #FF87AB;
     width: 650px;
     border: 5px solid black;
@@ -222,27 +240,24 @@ font-weight: 400;
     padding-left: 30px;
 }
 
-.footer-right-side p{
+.footer-right-side p {
     font-size: 22px;
     font-weight: 500;
 }
 
-.email-and-button input[type=email]{
+.email-and-button input[type=email] {
     height: 55px;
     width: 80%;
     padding: 10px;
     font-size: 20px;
     border: 5px solid black;
     border-radius: 6px;
+    outline: none;
 }
 
-.email-and-button{
+.email-and-button {
     display: flex;
     flex-direction: row;
     align-items: center;
     gap: 15px;
 }
-
-
-  
-
