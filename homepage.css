@@ -94,17 +94,19 @@
     }
 }
 
-
-.div-one{
-    height: 80vh;
+.screen{
+    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-top:250px;
-    margin-bottom: 205px;
+    margin-bottom: 100px;
+}
+
+.div-one{
+    padding-top:100px;
 }
 .home-window{
-    animation: home-window 3s ease-in forwards;
+    animation: home-window 3s ease-out forwards;
     background: #FFFCE1;
     height: 600px;
     width: 780px;
@@ -172,20 +174,23 @@
     top:350px ;
 }
 .home-window-buttons button{
+    position: relative;
     font-size: 40px !important;
     padding: 10px;
     border-radius: 50px;
     border: 5px solid black;
     background: white;
+    margin-bottom: auto;
+    left: 0px;
+    top: 0px;
+}
+.home-window-buttons button:hover{
+    top: -5px;
+    left: -5px;
+    transition: all .5s;
+    background: darkgrey;
     box-shadow: 5px 5px 0px black ;
-}
-.home-window-buttons .button1:hover{
-    background: rgb(196, 214, 0);
-    transition: background .5s;
-}
-.home-window-buttons .button2:hover{
-    background: rgb(0, 189, 107);
-    transition: background .5s;
+
 }
 .home-window-buttons .button1{
     background: #FFEC42;
@@ -207,12 +212,7 @@
     position: absolute;
     left: 350px;
     height: 200px;
-    transition: top 1s;
 }
-
-
-
-
 .home-window-bg .img1{
     animation: img1 2s ease-in-out forwards;
 }
@@ -231,3 +231,13 @@
 .home-window-bg .img6{
     animation: img6 2s ease-in-out forwards;
 }
+
+.div-two{
+    width: 1200px;
+    height: 700px;
+    background: var(--bg-color);
+    border: 5px solid;
+    border-radius: 100px;
+    box-shadow: -10px 10px 2px black;
+}
+
