@@ -31,6 +31,7 @@
     border: 5px solid black;
     padding-top: 191px;
     overflow: hidden;
+    transition: all .5s ease;
 }
 .img-and-card:hover .calling-card{
     height: 425px;

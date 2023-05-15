@@ -95,7 +95,7 @@
 }
 
 .screen{
-    height: 100vh;
+    height: 800px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -103,10 +103,9 @@
 }
 
 .div-one{
-    padding-top:100px;
 }
 .home-window{
-    animation: home-window 3s ease-out forwards;
+    animation: home-window 3s ease forwards;
     background: #FFFCE1;
     height: 600px;
     width: 780px;
@@ -183,11 +182,12 @@
     margin-bottom: auto;
     left: 0px;
     top: 0px;
+    transition: all .3s;
 }
 .home-window-buttons button:hover{
     top: -5px;
     left: -5px;
-    transition: all .5s;
+    transition: all .3s;
     background: darkgrey;
     box-shadow: 5px 5px 0px black ;
 

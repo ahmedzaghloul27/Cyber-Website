@@ -42,5 +42,4 @@ let homeWindowBgImages = document.querySelectorAll('.home-window-bg img');
       }
     };
     window.addEventListener('scroll', checkScroll);
-  
   })();
