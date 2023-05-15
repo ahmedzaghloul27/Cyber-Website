@@ -1,12 +1,12 @@
 .aboutus-div1{
-    height: 1000px;
+    height: 800px;
     background-image: url(Images/about-us-bg-orange.svg);
     background-repeat: no-repeat;
     background-position: center;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 200px;
+    gap: 150px;
 }
 .img-and-card{
     display: flex;
@@ -18,19 +18,23 @@
     border-radius: 50%;
     border: 5px solid black;
     z-index: 2;
-
     /* -webkit-filter: grayscale(1); */
 }
 .calling-card{
     position: relative;
     top: -200px;
     min-width: 360px;
-    min-height: 200px ;
+    height: 260px ;
     background: white;
     border-radius: 50px;
     box-shadow: -15px 15px 2px black;
     border: 5px solid black;
     padding-top: 191px;
+    overflow: hidden;
+}
+.img-and-card:hover .calling-card{
+    height: 425px;
+    transition: all .5s ease;
 }
 .calling-card-content{
     padding-top: 10px;
@@ -39,6 +43,7 @@
     align-items: center;
     border-top: 5px solid black;
     height: 200px;
+    gap: 5px;
 }
 .card-links{
     display: flex;
