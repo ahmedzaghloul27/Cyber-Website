@@ -12,7 +12,6 @@ let homeWindowBgImages = document.querySelectorAll('.home-window-bg img');
     var curScroll;
     var direction = 0;
     var prevDirection = 0;
-  
     var header = document.getElementById('header');
   
     var checkScroll = function() {
@@ -21,6 +20,7 @@ let homeWindowBgImages = document.querySelectorAll('.home-window-bg img');
         //scrolled up
         direction = 2;
       }
+
       else if (curScroll < prevScroll) { 
         direction = 1;
       }
@@ -43,3 +43,25 @@ let homeWindowBgImages = document.querySelectorAll('.home-window-bg img');
     };
     window.addEventListener('scroll', checkScroll);
   })();
+
+//   -----------checkbox------------
+
+  function onlyOne(check) {
+    var checkbox = document.getElementsByName('check')
+    checkbox.forEach((item) => {
+        if (item !== check) item.checked = false
+    })
+}
+
+// --------------------------transition page----------------------------
+
+// window.transitionToPage = function(href) {
+//     document.querySelector('body').style.opacity = 0
+//     setTimeout(function() { 
+//         window.location.href = href
+//     }, 500)
+// }
+
+// document.addEventListener('DOMContentLoaded', function(event) {
+//     document.querySelector('body').style.opacity = 1
+// })
