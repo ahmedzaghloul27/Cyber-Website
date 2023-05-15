@@ -147,11 +147,10 @@ ul {
     gap: 25px;
 }
 
-.social-icon {
+.social-icon{
     display: flex;
     align-items: center;
     justify-content: center;
-    /* overflow: hidden; */
 }
 
 .social-icon span {
