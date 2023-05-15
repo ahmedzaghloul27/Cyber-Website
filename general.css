@@ -17,9 +17,6 @@
     /* adjust the font weight and size by yourself in every element */
 }
 
-::-webkit-scrollbar {
-    display: none;
-}
 
 body{
     background-color: #FFEFE3;
