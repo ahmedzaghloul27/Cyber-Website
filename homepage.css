@@ -100,10 +100,9 @@
     align-items: center;
     justify-content: center;
     margin-bottom: 100px;
+
 }
 
-.div-one{
-}
 .home-window{
     animation: home-window 3s ease forwards;
     background: #FFFCE1;

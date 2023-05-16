@@ -77,11 +77,13 @@ form p:first-child {
 form .flex-container input[id],
 select, 
 textarea{
+    resize: vertical;
     background: #F0FFD1;
     border: 2px solid #000000;
     box-shadow: 5px 4px 0px #000000;
     border-radius: 9px;
     outline: none;
+
 }
 
 form .flex-container input[id]:focus,
@@ -89,7 +91,7 @@ select:focus,
 textarea:focus{
     border: 3.7px solid #000000;
     box-shadow: 7px 6px 0px #000000;
-    transition: all ease 0.5s;
+    transition: all ease 0.1s;
 }
 
 
@@ -172,7 +174,8 @@ form .flex-container [name=description]{
     font-size: 20px;
     padding-left: 15px;
     width: 830px;
-    height: 150px;
+    min-height: 150px;
+    max-height: 450px;
 }
 
 form .submit-check a{
