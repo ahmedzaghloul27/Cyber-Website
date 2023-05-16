@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="general.css">
     <link rel="stylesheet" href="login.css">
+
     <title>Request game</title>
 </head>
 
@@ -25,7 +26,7 @@
         <img src="Images/ai2.png" alt="ai1">
         <img src="Images/ai1.png" alt="ai2">
     </div>
-
+    <button class="back-button" onclick="goBack()"></button>
     <div class="screen">
         <div class="login-window">
             <div class="login-window-header">
@@ -38,12 +39,38 @@
             </div>
             <div class="right-content">
                 <div class="text">
-                    <p>Hello,Friend!</p>
+                    <p>Hello, Friend!</p>
                     <p>Enter your details to start your<br>journey with us</p>
                 </div>
-                <button onclick="goBack()">Back</button>
-            </div>
+                <a href="#" class="sign hover-effect">Sign Up</a>
 
+            </div>
+            <div class="left-content">
+                <div class="buttons">
+                    <div class="button">
+                        <a href="#" title="login with facebook" ><img src="Images/facebook.png" alt="facebook"></a>
+                    </div>
+                    <div class="button">
+                        <a href="#" title="login with google"><img src="Images/google.png" alt="google"></a>
+                    </div>
+                    <div class="button">
+                        <a href="#" title="login with apple"><img src="Images/apple-logo.png" alt="apple"></a>
+                    </div>
+                </div>
+                
+                <form action="">
+                    
+                    <label for="email">
+                        <input type="email" id="email" placeholder="Email Address" required>
+                    </label>
+                    <label for="password">
+                        <input type="password"  placeholder="Password" id="password" required>
+                    </label>
+                    <a href="#" class="pass"><u>Forgot Password?</u></a>
+                    <input type="submit" class="hover-effect" value="Login">
+                </form>
+                <p>Login</p>
+            </div>
         </div>
     </div>
     <script src="general.js"></script>

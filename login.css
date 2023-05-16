@@ -36,6 +36,8 @@
     border-radius: 30px;
     overflow: hidden;
     border: 5px solid black;
+    background-image: url(Images/background-window.png);
+    background-size: 500px;
 }
 
 .login-window-header {
@@ -48,15 +50,6 @@
     width: auto;
     justify-content: space-between;
     z-index: 1;
-}
-
-.right-content{
-    right: 0px;
-    position: absolute;
-    height: 100%;
-    background: linear-gradient(180.03deg, #FFED4F 0.03%, #FFEFE3 83.41%);
-    width: 500px;
-    border-left: 5px solid #000000;
 }
 
 .circles-div {
@@ -90,68 +83,178 @@
 }
 
 
-
-.home-window-buttons {
-    position: absolute;
-    display: flex;
-    gap: 20px;
-    z-index: 1;
-    top: 350px;
-}
-
-.home-window-buttons button {
-    position: relative;
-    font-size: 40px !important;
-    padding: 10px;
-    border-radius: 50px;
-    border: 5px solid black;
-    background: white;
-    margin-bottom: auto;
-    left: 0px;
-    top: 0px;
-    transition: all .3s;
-}
-
-.home-window-buttons button:hover {
-    top: -5px;
-    left: -5px;
-    transition: all .3s;
-    background: rgb(0, 98, 255);
-    box-shadow: 5px 5px 0px black;
-
-}
-
-.home-window-buttons .button1 {
-    background: #FFEC42;
-}
-
-.home-window-buttons .button2 {
-    background: #C5FFA8;
-}
-
-.login-window .right-content{
+.login-window .right-content {
     display: flex;
     justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    right: 0px;
+    position: absolute;
+    height: 100%;
+    background: #FFED4D;
+    width: 500px;
+    gap: 50px;
+    border-left: 5px solid #000000;
+    
 }
 
-.login-window .right-content p{
+.login-window .right-content p {
     text-align: center;
 }
 
-.login-window .right-content p:first-child{
-    font-size: 65px;
-    font-weight: 600;
+.login-window .right-content p:first-child {
+    font-size: 60px;
+    font-weight: 700;
 }
 
-.login-window .right-content .text>p:last-child{
+.login-window .right-content .text>p:last-child {
     font-size: 20px;
     font-weight: 400;
-} 
-
-.login-window .right-content .text{
-    display: flex;
-    gap: 10px;
-    flex-direction: column;
-    margin-top: 140px;
 }
+
+.login-window .right-content .text {
+    display: flex;
+    
+    flex-direction: column;
+}
+
+.left-content .buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.left-content .button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    width: 60px;
+    height: 60px;
+    background: #FFFFFF;
+    border: 3px solid #162231;
+    box-shadow: 5px 5px 0px #000000;
+    border-radius: 15px;
+    transition: all 0.1s ease-in;
+}
+
+.left-content .button:hover {
+    border: 3.5px solid #162231;
+    box-shadow: 3px 3px 0px #000000;
+}
+
+.login-window .left-content {
+    margin-top: 55px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+
+
+.left-content .buttons>.button:nth-child(1) img {
+    width: 49px;
+    margin-top: 10px;
+}
+
+.left-content .buttons>.button:nth-child(2) img {
+    width: 37px;
+    margin-top: 8px;
+}
+
+.left-content .buttons>.button:nth-child(3) img {
+    width: 37px;
+    margin-top: 8px;
+}
+
+/* .login-window .left-content form label {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    
+} */
+
+.login-window .left-content form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    
+}
+
+.login-window .left-content form label input {
+    width: 450px;
+    height: 60px;
+    background: #FFFFFF;
+    border: 2px solid #000000;
+    box-shadow: 5px 4px 0px #000000;
+    border-radius: 9px;
+    padding: 8px;
+    font-size: 25px;
+    font-weight: 500;
+    outline: none;
+}
+
+.login-window .left-content{
+    width: 600px;
+    padding: 30px;
+    display: flex;
+    position: absolute;
+    
+    flex-direction: column-reverse;
+    gap: 30px;
+    align-items: center;
+}
+
+.login-window .left-content a{
+    font-size: 20px;
+}
+
+.login-window .left-content p{
+    font-size: 40px;
+    font-weight: 700;
+    color: #9b0000;
+}
+
+.back-button{
+    background-image: url(Images/square-caret-left-solid.svg);
+    background-size: 50px;
+    width: 50px;
+    height: 50px;
+    left: 150px;
+    top: 60px;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-position: -2px -4px;
+    border-radius: 20px;
+    outline: none;
+}
+
+form input[type=submit],
+.sign{
+    
+    font-size: 35px;
+    text-align: center;
+    font-weight: 600;
+    background: #C5FFA8;
+    border: 3px solid #000000;
+    border-radius: 40px;
+    outline: none;
+    padding: 4px 20px 4px 20px;
+    transition: all 0.1s ease-in-out;
+}
+
+form input[type=submit]:hover,
+.sign:hover{
+    box-shadow: 4px 3px 0px #000000;
+}
+
+form input[type=submit]:active,
+.sign:active{
+    box-shadow: 4px 3px 0px #000000;
+    background: #fdf382;
+    transition: all 0.2s ease;
+}
+
+
+
 

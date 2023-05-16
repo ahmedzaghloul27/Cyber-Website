@@ -195,6 +195,12 @@ form .flex-container input[type=submit] {
     outline: none;
     width: 180px;
     height: 60px;
+    transition: all 0.1s ease-in-out;
+}
+
+form .flex-container input[type=submit]:hover{
+    border: 4px solid #000000;
+    box-shadow: 4px 3px 0px #000000;
 }
 
 
