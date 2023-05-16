@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,12 +14,39 @@
         integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
     <link rel="stylesheet" href="general.css">
     <link rel="stylesheet" href="login.css">
     <title>Request game</title>
 </head>
+
 <body>
-    
+    <!-- ai stands for adobe illustration -->
+    <div class="illustrations">
+        <img src="Images/ai2.png" alt="ai1">
+        <img src="Images/ai1.png" alt="ai2">
+    </div>
+
+    <div class="screen">
+        <div class="login-window">
+            <div class="login-window-header">
+                <span class="line"></span>
+                <div class="circles-div">
+                    <span class="circle item1"></span>
+                    <span class="circle item2"></span>
+                    <span class="circle item3"></span>
+                </div>
+            </div>
+            <div class="right-content">
+                <div class="text">
+                    <p>Hello,Friend!</p>
+                    <p>Enter your details to start your<br>journey with us</p>
+                </div>
+                <button onclick="goBack()">Back</button>
+            </div>
+
+        </div>
+    </div>
+    <script src="general.js"></script>
 </body>
+
 </html>

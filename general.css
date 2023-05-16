@@ -27,13 +27,13 @@ body{
 
 }
 
-.screen {
+/* .screen {
     height: 800px;
     display: flex;
     align-items: center;
     justify-content: center;
     margin-bottom: 100px;
-}
+} */
 
 .hover-effect:hover {
     top: -5px;

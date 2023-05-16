@@ -17,8 +17,9 @@
     font-size: 35px;
     font-weight: 400;
 }
-form{
-display: flex;
+
+form {
+    display: flex;
     justify-content: center;
 }
 
@@ -51,10 +52,10 @@ form p:first-child {
     align-items: flex-start;
 }
 
-.form-container{
+.form-container {
     display: flex;
     justify-content: center;
-} 
+}
 
 
 .flex-container {
@@ -75,8 +76,8 @@ form p:first-child {
 
 
 form .flex-container input[id],
-select, 
-textarea{
+select,
+textarea {
     resize: vertical;
     background: #F0FFD1;
     border: 2px solid #000000;
@@ -87,8 +88,8 @@ textarea{
 }
 
 form .flex-container input[id]:focus,
-select:focus, 
-textarea:focus{
+select:focus,
+textarea:focus {
     border: 3.7px solid #000000;
     box-shadow: 7px 6px 0px #000000;
     transition: all ease 0.1s;
@@ -128,7 +129,7 @@ form .flex-container .radio-box [type=checkbox]:checked::before {
     background-size: 25px;
     background-repeat: no-repeat;
     background-position: 3px 2px;
-    
+
 }
 
 form .flex-container .submit-check input[type=checkbox] {
@@ -151,7 +152,7 @@ form .flex-container .submit-check [type=checkbox]:checked::before {
     background-position: 2px 2px;
 }
 
-form .flex-container select{
+form .flex-container select {
     color: rgba(0, 0, 0, 0.57);
 }
 
@@ -163,14 +164,14 @@ select {
     height: 50px;
 }
 
-form .flex-container [name=name]{
+form .flex-container [name=name] {
     font-size: 20px;
     padding-left: 15px;
     width: 400px;
     height: 50px;
 }
 
-form .flex-container [name=description]{
+form .flex-container [name=description] {
     font-size: 20px;
     padding-left: 15px;
     width: 830px;
@@ -178,12 +179,12 @@ form .flex-container [name=description]{
     max-height: 450px;
 }
 
-form .submit-check a{
+form .submit-check a {
     font-weight: 700;
     color: rgb(132, 0, 0);
 }
 
-form .flex-container input[type=submit]{
+form .flex-container input[type=submit] {
     font-size: 35px;
     text-align: center;
     font-weight: 600;
@@ -197,16 +198,16 @@ form .flex-container input[type=submit]{
 }
 
 
-.bg-illustrations{
+.bg-illustrations {
     position: absolute;
     right: 0px;
     top: 0px;
     z-index: -1;
     width: 800px;
-    
+
 }
 
-.bg-illustrations2{
+.bg-illustrations2 {
     position: absolute;
     left: 0px;
     bottom: -37px;

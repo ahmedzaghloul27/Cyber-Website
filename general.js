@@ -70,6 +70,10 @@ for (let i = 0; i < gameContainer.length; i++) {
     })
 }
 
+function goBack() {
+  window.history.back();
+}
+
 // --------------------------transition page----------------------------
 
 // window.transitionToPage = function(href) {

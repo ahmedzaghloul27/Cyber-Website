@@ -1,0 +1,157 @@
+.illustrations img {
+    width: 550px;
+}
+
+.illustrations img:first-child {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: -1;
+
+}
+
+.illustrations img:last-child {
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    z-index: -1;
+}
+
+/* ------------------login--------------------- */
+
+.screen {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-window {
+    position: absolute;
+    top: 50px;
+    background: #FFFCE1;
+    height: 600px;
+    width: 1100px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 30px;
+    overflow: hidden;
+    border: 5px solid black;
+}
+
+.login-window-header {
+    background: #fd5050;
+    border-bottom: solid 5px black;
+    height: 60px;
+    display: flex;
+    padding: 20px;
+    align-items: center;
+    width: auto;
+    justify-content: space-between;
+    z-index: 1;
+}
+
+.right-content{
+    right: 0px;
+    position: absolute;
+    height: 100%;
+    background: linear-gradient(180.03deg, #FFED4F 0.03%, #FFEFE3 83.41%);
+    width: 500px;
+    border-left: 5px solid #000000;
+}
+
+.circles-div {
+    display: flex;
+    gap: 10px;
+}
+
+.login-window-header .line {
+    width: 130px;
+    border: 7px solid rgb(73, 73, 73);
+    border-radius: 50px;
+}
+
+.circles-div .circle {
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    border: 3px solid black;
+}
+
+.circles-div .item1 {
+    background: rgb(235, 235, 235);
+}
+
+.circles-div .item2 {
+    background: #C5FFA8;
+}
+
+.circles-div .item3 {
+    background: red;
+}
+
+
+
+.home-window-buttons {
+    position: absolute;
+    display: flex;
+    gap: 20px;
+    z-index: 1;
+    top: 350px;
+}
+
+.home-window-buttons button {
+    position: relative;
+    font-size: 40px !important;
+    padding: 10px;
+    border-radius: 50px;
+    border: 5px solid black;
+    background: white;
+    margin-bottom: auto;
+    left: 0px;
+    top: 0px;
+    transition: all .3s;
+}
+
+.home-window-buttons button:hover {
+    top: -5px;
+    left: -5px;
+    transition: all .3s;
+    background: rgb(0, 98, 255);
+    box-shadow: 5px 5px 0px black;
+
+}
+
+.home-window-buttons .button1 {
+    background: #FFEC42;
+}
+
+.home-window-buttons .button2 {
+    background: #C5FFA8;
+}
+
+.login-window .right-content{
+    display: flex;
+    justify-content: center;
+}
+
+.login-window .right-content p{
+    text-align: center;
+}
+
+.login-window .right-content p:first-child{
+    font-size: 65px;
+    font-weight: 600;
+}
+
+.login-window .right-content .text>p:last-child{
+    font-size: 20px;
+    font-weight: 400;
+} 
+
+.login-window .right-content .text{
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    margin-top: 140px;
+}
+
