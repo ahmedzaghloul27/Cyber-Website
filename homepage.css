@@ -163,6 +163,7 @@
     pointer-events: none;
     -webkit-user-drag: none;
     -webkit-user-select: none;
+    
 }
 .home-window-buttons{
     position: absolute;
