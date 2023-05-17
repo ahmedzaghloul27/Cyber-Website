@@ -3,71 +3,71 @@ let homeWindowBg = document.querySelector('.home-window-bg');
 let homeWindowBgImages = document.querySelectorAll('.home-window-bg img');
 
 // -------------------------header---------------------------
-(function(){
+(function () {
 
-    var doc = document.documentElement;
-    var w = window;
-  
-    var prevScroll = w.scrollY || doc.scrollTop;
-    var curScroll;
-    var direction = 0;
-    var prevDirection = 0;
-    var header = document.getElementById('header');
-  
-    var checkScroll = function() {
-      curScroll = w.scrollY || doc.scrollTop;
-      if (curScroll > prevScroll) { 
-        //scrolled up
-        direction = 2;
-      }
+  var doc = document.documentElement;
+  var w = window;
 
-      else if (curScroll < prevScroll) { 
-        direction = 1;
-      }
-  
-      if (direction !== prevDirection) {
-        toggleHeader(direction, curScroll);
-      }
-      prevScroll = curScroll;
-    };
-  
-    var toggleHeader = function(direction, curScroll) {
-      if (direction === 2 && curScroll > 126) { 
-        header.classList.add('hide');
-        prevDirection = direction;
-      }
-      else if (direction === 1) {
-        header.classList.remove('hide');
-        prevDirection = direction;
-      }
-    };
-    window.addEventListener('scroll', checkScroll);
-  })();
+  var prevScroll = w.scrollY || doc.scrollTop;
+  var curScroll;
+  var direction = 0;
+  var prevDirection = 0;
+  var header = document.getElementById('header');
+
+  var checkScroll = function () {
+    curScroll = w.scrollY || doc.scrollTop;
+    if (curScroll > prevScroll) {
+      //scrolled up
+      direction = 2;
+    }
+
+    else if (curScroll < prevScroll) {
+      direction = 1;
+    }
+
+    if (direction !== prevDirection) {
+      toggleHeader(direction, curScroll);
+    }
+    prevScroll = curScroll;
+  };
+
+  var toggleHeader = function (direction, curScroll) {
+    if (direction === 2 && curScroll > 126) {
+      header.classList.add('hide');
+      prevDirection = direction;
+    }
+    else if (direction === 1) {
+      header.classList.remove('hide');
+      prevDirection = direction;
+    }
+  };
+  window.addEventListener('scroll', checkScroll);
+})();
 
 
-  let arrowRight = document.querySelectorAll('.genre-container .right-arrow');
-  let arrowLeft = document.querySelectorAll('.genre-container .left-arrow');
-  let gameContainer = document.querySelectorAll('.game-card-container');
-  let gameCard = document.querySelector('.game-card-container .game-card');
-  
+let arrowRight = document.querySelectorAll('.genre-container .right-arrow');
+let arrowLeft = document.querySelectorAll('.genre-container .left-arrow');
+let gameContainer = document.querySelectorAll('.game-card-container');
+let gameCard = document.querySelector('.game-card-container .game-card');
+
 for (let i = 0; i < gameContainer.length; i++) {
-    arrowRight[i].addEventListener('click', ()=>{
-        const slideWidth = gameCard.clientWidth;
-        gameContainer[i].scrollLeft += slideWidth;
-    })
-    arrowLeft[i].addEventListener('click', ()=>{
-        const slideWidth = gameCard.clientWidth;
-        gameContainer[i].scrollLeft -= slideWidth;
-    });
+  arrowRight[i].addEventListener('click', () => {
+    const slideWidth = gameCard.clientWidth;
+    gameContainer[i].scrollLeft += slideWidth;
+  })
+  arrowLeft[i].addEventListener('click', () => {
+    const slideWidth = gameCard.clientWidth;
+    gameContainer[i].scrollLeft -= slideWidth;
+  });
 };
-  
+
 //   -----------checkbox------------
 
-  function onlyOne(check) {
-    var checkbox = document.getElementsByName('check')
-    checkbox.forEach((item) => {
-        if (item !== check) item.checked = false
-    })
+function onlyOne(check) {
+  var checkbox = document.getElementsByName('check')
+  checkbox.forEach((item) => {
+    if (item !== check) item.checked = false
+  })
 }
 
 function goBack() {
@@ -78,7 +78,7 @@ function goBack() {
 
 // window.transitionToPage = function(href) {
 //     document.querySelector('body').style.opacity = 0
-//     setTimeout(function() { 
+//     setTimeout(function() {
 //         window.location.href = href
 //     }, 500)
 // }

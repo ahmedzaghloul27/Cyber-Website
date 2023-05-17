@@ -1,100 +1,121 @@
-@keyframes home-window{
-    0%{
+@keyframes home-window {
+    0% {
         position: absolute;
         top: -100vh
     }
-    50%{
+
+    50% {
         position: relative;
         top: -100vh;
     }
-    100%{
+
+    100% {
         position: relative;
         top: 0;
     }
 }
-@keyframes img1{
+
+@keyframes img1 {
     0% {
         top: -100px;
     }
-    30%{
+
+    30% {
         top: -100px;
     }
-    50%{
+
+    50% {
         top: -300px;
         left: 340px;
     }
-    100%{
+
+    100% {
         top: -300px;
-        left: 5px;
-    }
-}
-@keyframes img2{
-    0% {
-        top: -100px;
-    }
-    30%{
-        top: -100px;
-    }
-    50%{
-        top: -300px;
-        left: 340px;
-    }
-    100%{
-        top: -300px;
-        left: 790px;
-    }
-}
-@keyframes img3{
-    50%{
-        left: 340px;
-    }
-    100%{
         left: 5px;
     }
 }
 
-@keyframes img4{
-    50%{
-        left: 340px;
-    }
-    100%{
-        left: 790px;
-    }
-}
-@keyframes img5{
+@keyframes img2 {
     0% {
         top: -100px;
     }
-    30%{
+
+    30% {
         top: -100px;
     }
-    50%{
+
+    50% {
+        top: -300px;
+        left: 340px;
+    }
+
+    100% {
+        top: -300px;
+        left: 790px;
+    }
+}
+
+@keyframes img3 {
+    50% {
+        left: 340px;
+    }
+
+    100% {
+        left: 5px;
+    }
+}
+
+@keyframes img4 {
+    50% {
+        left: 340px;
+    }
+
+    100% {
+        left: 790px;
+    }
+}
+
+@keyframes img5 {
+    0% {
+        top: -100px;
+    }
+
+    30% {
+        top: -100px;
+    }
+
+    50% {
         top: 110px;
         left: 340px;
     }
-    100%{
+
+    100% {
         top: 110px;
         left: 5px;
     }
 }
-@keyframes img6{
+
+@keyframes img6 {
     0% {
         top: -100px;
     }
-    30%{
+
+    30% {
         top: -100px;
     }
-    50%{
+
+    50% {
         top: 110px;
         left: 340px;
     }
-    100%{
+
+    100% {
         top: 110px;
         left: 790px;
     }
 }
 
-.screen{
+.screen {
     height: 800px;
     display: flex;
     align-items: center;
@@ -103,7 +124,7 @@
 
 }
 
-.home-window{
+.home-window {
     animation: home-window 3s ease forwards;
     background: #FFFCE1;
     height: 600px;
@@ -114,7 +135,8 @@
     overflow: hidden;
     border: 5px solid black;
 }
-.home-window-header{
+
+.home-window-header {
     background: #77B8F4;
     height: 60px;
     display: flex;
@@ -124,32 +146,38 @@
     justify-content: space-between;
     border-bottom: solid 5px black;
 }
-.circles-div{
+
+.circles-div {
     display: flex;
     gap: 10px;
 }
-.home-window-header .line{
+
+.home-window-header .line {
     width: 130px;
     border: 7px solid rgb(73, 73, 73);
     border-radius: 50px;
 }
-.circles-div .circle{
+
+.circles-div .circle {
     height: 25px;
     width: 25px;
     border-radius: 50%;
     border: 3px solid black;
 }
-.circles-div .item1{
+
+.circles-div .item1 {
     background: rgb(235, 235, 235);
 }
-.circles-div .item2{
+
+.circles-div .item2 {
     background: #C5FFA8;
 }
-.circles-div .item3{
+
+.circles-div .item3 {
     background: red;
 }
 
-.home-window-body{
+.home-window-body {
     position: relative;
     padding: 50px;
     display: flex;
@@ -158,22 +186,25 @@
     justify-content: center;
     text-align: center;
 }
-.home-window-body img{
+
+.home-window-body img {
     position: absolute;
     top: 10px;
     pointer-events: none;
     -webkit-user-drag: none;
     -webkit-user-select: none;
-    
+
 }
-.home-window-buttons{
+
+.home-window-buttons {
     position: absolute;
     display: flex;
     gap: 20px;
     z-index: 1;
-    top:350px ;
+    top: 350px;
 }
-.home-window-buttons button{
+
+.home-window-buttons button {
     position: relative;
     font-size: 40px !important;
     padding: 10px;
@@ -185,22 +216,24 @@
     top: 0px;
     transition: all .3s;
 }
-.home-window-buttons button:hover{
+
+.home-window-buttons button:hover {
     top: -5px;
     left: -5px;
     transition: all .3s;
     background: rgb(0, 98, 255);
-    box-shadow: 5px 5px 0px black ;
+    box-shadow: 5px 5px 0px black;
 }
 
-.home-window-buttons .button1{
+.home-window-buttons .button1 {
     background: #FFEC42;
 }
-.home-window-buttons .button2{
+
+.home-window-buttons .button2 {
     background: #C5FFA8;
 }
- 
-.home-window-bg{
+
+.home-window-bg {
     position: absolute;
     display: flex;
     flex-wrap: wrap;
@@ -209,31 +242,38 @@
     z-index: -1;
     width: 1180px;
 }
-.home-window-bg img{
+
+.home-window-bg img {
     position: absolute;
     left: 350px;
     height: 200px;
 }
-.home-window-bg .img1{
+
+.home-window-bg .img1 {
     animation: img1 2s ease-in-out forwards;
 }
-.home-window-bg .img2{
+
+.home-window-bg .img2 {
     animation: img2 2s ease-in-out forwards;
 }
-.home-window-bg .img3{
+
+.home-window-bg .img3 {
     animation: img3 2s ease-in-out forwards;
 }
-.home-window-bg .img4{
+
+.home-window-bg .img4 {
     animation: img4 2s ease-in-out forwards;
 }
-.home-window-bg .img5{
+
+.home-window-bg .img5 {
     animation: img5 2s ease-in-out forwards;
 }
-.home-window-bg .img6{
+
+.home-window-bg .img6 {
     animation: img6 2s ease-in-out forwards;
 }
 
-.div-two{
+.div-two {
     width: 1200px;
     height: 700px;
     background: var(--bg-color);
@@ -241,4 +281,3 @@
     border-radius: 100px;
     box-shadow: -10px 10px 2px black;
 }
-

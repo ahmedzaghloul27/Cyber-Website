@@ -17,6 +17,20 @@
     z-index: -1;
 }
 
+.back-button {
+    background-image: url(Images/square-caret-left-solid.svg);
+    background-size: 50px;
+    width: 50px;
+    height: 50px;
+    left: 150px;
+    top: 60px;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-position: -2px -4px;
+    border-radius: 20px;
+    outline: none;
+}
+
 /* ------------------login--------------------- */
 
 .screen {
@@ -95,7 +109,7 @@
     width: 500px;
     gap: 50px;
     border-left: 5px solid #000000;
-    
+
 }
 
 .login-window .right-content p {
@@ -114,12 +128,13 @@
 
 .login-window .right-content .text {
     display: flex;
-    
+
     flex-direction: column;
 }
 
 .left-content .buttons {
     display: flex;
+    position: relative;
     gap: 20px;
 }
 
@@ -132,20 +147,24 @@
     height: 60px;
     background: #FFFFFF;
     border: 3px solid #162231;
-    box-shadow: 5px 5px 0px #000000;
     border-radius: 15px;
-    transition: all 0.1s ease-in;
+    transition: all .1s ease-in-out;
+    transform: translate(-5px, -5px);
+    box-shadow: 5px 5px 0px black;
 }
 
-.left-content .button:hover {
-    border: 3.5px solid #162231;
-    box-shadow: 3px 3px 0px #000000;
+.button:hover {
+    box-shadow: 0px 0px 0px black ;
+    transform: translate(0px, 0px);
+    transition: all .1s;
 }
+
 
 .login-window .left-content {
     margin-top: 55px;
     display: flex;
     flex-direction: column;
+
     gap: 30px;
 }
 
@@ -173,12 +192,11 @@
     
 } */
 
-.login-window .left-content form{
+.login-window .left-content form {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 20px;
-    
 }
 
 .login-window .left-content form label input {
@@ -194,67 +212,52 @@
     outline: none;
 }
 
-.login-window .left-content{
+.login-window .left-content {
     width: 600px;
     padding: 30px;
     display: flex;
     position: absolute;
-    
+
     flex-direction: column-reverse;
     gap: 30px;
     align-items: center;
 }
 
-.login-window .left-content a{
+.login-window .left-content a {
     font-size: 20px;
 }
 
-.login-window .left-content p{
+.login-window .left-content p {
     font-size: 40px;
     font-weight: 700;
     color: #9b0000;
 }
 
-.back-button{
-    background-image: url(Images/square-caret-left-solid.svg);
-    background-size: 50px;
-    width: 50px;
-    height: 50px;
-    left: 150px;
-    top: 60px;
-    position: absolute;
-    background-repeat: no-repeat;
-    background-position: -2px -4px;
-    border-radius: 20px;
-    outline: none;
-}
-
 form input[type=submit],
-.sign{
-    
+.sign {
     font-size: 35px;
     text-align: center;
     font-weight: 600;
     background: #C5FFA8;
-    border: 3px solid #000000;
+    border: 3.5px solid #000000;
     border-radius: 40px;
     outline: none;
     padding: 4px 20px 4px 20px;
-    transition: all 0.1s ease-in-out;
+    transition: all .1s ease-in-out;
+    transform: translate(-5px, -5px);
+    box-shadow: 5px 5px 0px black;
+    cursor: pointer;
 }
 
 form input[type=submit]:hover,
-.sign:hover{
-    box-shadow: 4px 3px 0px #000000;
+.sign:hover {
+    box-shadow: 0px 0px 0px black;
+    transform: translate(0px, 0px);
+    transition: all .1s;
 }
 
 form input[type=submit]:active,
-.sign:active{
-    box-shadow: 4px 3px 0px #000000;
-    background: #fdf382;
-    transition: all 0.2s ease;
+.sign:active {
+    background: #ffa238;
+    transition: all 0.1s ease;
 }
-
-
-
-
