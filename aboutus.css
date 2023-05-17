@@ -38,7 +38,7 @@
     transition: all .5s ease;
 }
 .calling-card-content{
-    padding-top: 10px;
+    padding-top: 15px;
     display: flex;
     flex-direction: column;
     align-items: center;
