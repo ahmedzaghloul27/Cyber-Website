@@ -189,10 +189,11 @@ ul {
     height: 50px;
 }
 
-footer {
+footer{
     display: flex;
     min-width: 1200px;
     background: red;
+    width: 90%;
     height: 130px;
     box-shadow: 10px 12px 0px 3px #000000;
 }
@@ -208,6 +209,7 @@ footer a {
     gap: 40px;
     padding-left: 30px;
     width: 750px;
+    width: 90%;
     border: 5px solid black;
     border-right: 2.7px solid;
     align-items: center;
@@ -224,6 +226,7 @@ footer a {
     border: 5px solid black;
     border-left: 2.7px solid;
     display: flex;
+    width: 90%;
     gap: 6px;
     flex-direction: column;
     justify-content: center;
