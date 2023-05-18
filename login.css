@@ -199,7 +199,7 @@
     gap: 20px;
 }
 
-.login-window .left-content form label input {
+.login-window .left-content form label input{
     width: 450px;
     height: 60px;
     background: #FFFFFF;
@@ -207,9 +207,15 @@
     box-shadow: 5px 4px 0px #000000;
     border-radius: 9px;
     padding: 8px;
-    font-size: 25px;
+    font-size: 20px;
     font-weight: 500;
     outline: none;
+}
+
+.login-window .left-content form label input:focus{
+    outline: 3px solid black;
+    outline-offset: -1px;
+    background-color: #ffd9d9;
 }
 
 .login-window .left-content {
@@ -217,7 +223,6 @@
     padding: 30px;
     display: flex;
     position: absolute;
-
     flex-direction: column-reverse;
     gap: 30px;
     align-items: center;
@@ -243,7 +248,7 @@ form input[type=submit],
     border-radius: 40px;
     outline: none;
     padding: 4px 20px 4px 20px;
-    transition: all .1s ease-in-out;
+    transition: all .1s ease;
     transform: translate(-5px, -5px);
     box-shadow: 5px 5px 0px black;
     cursor: pointer;
@@ -253,11 +258,13 @@ form input[type=submit]:hover,
 .sign:hover {
     box-shadow: 0px 0px 0px black;
     transform: translate(0px, 0px);
-    transition: all .1s;
+    transition: all .1s ease;
 }
 
 form input[type=submit]:active,
 .sign:active {
+    height: 100%;
     background: #ffa238;
     transition: all 0.1s ease;
 }
+

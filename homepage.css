@@ -116,12 +116,12 @@
 }
 
 .screen {
+    transform: translateY(-60px);
     height: 800px;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 100px;
-
+    margin-bottom: 70px;
 }
 
 .home-window {
@@ -273,11 +273,203 @@
     animation: img6 2s ease-in-out forwards;
 }
 
-.div-two {
-    width: 1200px;
-    height: 700px;
-    background: var(--bg-color);
-    border: 5px solid;
-    border-radius: 100px;
-    box-shadow: -10px 10px 2px black;
+.screen-container {
+    display: flex;
+    justify-content: center;
+}
+
+.screen2 .bg-ai{
+    position: absolute;
+    right: 19px;
+    top: 0px;
+    width: 100px;
+}
+
+.screen2 .bg-ai2{
+    position: absolute;
+    left: 19px;
+    top: 80px;
+    width: 70px;
+}
+
+.background-ai{
+        position: absolute;
+        left: 0px;
+        bottom: -34px;
+        z-index: -1;
+        width: 530px;
+}
+
+.background-ai2{
+    position: absolute;
+    right: 0px;
+    top: 750px;
+    z-index: -1;
+    width: 570px;
+}
+
+.button{
+    position: absolute;
+    left: 180px;
+    bottom: 60px;
+    font-size: 50px;
+    text-align: center;
+    font-weight: 600;
+    background: #fcfffa;
+    border: 3.5px solid #000000;
+    border-radius: 40px;
+    outline: none;
+    padding: 4px 20px 4px 20px;
+    transition: all .1s ease;
+    transform: translate(-5px, -5px);
+    box-shadow: 5px 5px 0px black;
+    cursor: pointer;
+}
+
+.button:hover{
+    box-shadow: 0px 0px 0px black;
+    transform: translate(0px, 0px);
+    transition: all .1s ease;
+}
+
+.button:active{
+    background: #47ff78;
+    transition: all 0.1s ease;
+}
+
+.screen2 {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 80px 0px 60px;
+    align-items: center;
+    width: 1100px;
+    height: 610px;
+    background: #FFED4F;
+    border: 8px solid #000000;
+    box-shadow: -11px 19px 0px #000000eb;
+    border-radius: 90px;
+    margin-bottom: 250px;
+    background-image: url(Images/bgscreen2.png);
+    position: relative;
+}
+
+.screen2 img{
+    position: relative;
+    width: 380px;
+    bottom: 33px;
+}
+
+.screen2 .text{
+    transform: translateY(-50px);
+}
+
+.screen2 .text p:first-child{
+    font-family:montras;
+    font-size: 90px;
+}
+
+.screen2 .text p:last-child,
+.red-text{
+    font-family:montras;
+    font-size: 45px;
+    font-weight: 600;
+}
+
+.screen2 .text .red-text{
+    color:#FF4C4C;
+}
+
+.screen3{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    width: 1100px;
+    height: 610px;
+    padding: 0px 80px 0px 60px;
+    background: #00FF57;
+    border: 8px solid #000000;
+    border-radius: 90px;
+    box-shadow: 11px 19px 0px #000000;
+    border-radius: 90px;
+    margin-bottom: 250px;
+    background-image: url(Images/bgscreen3.png);
+}
+
+.screen3 .bg-ai{
+    position: absolute;
+    left: 19px;
+    top: 0px;
+    transform: scaleX(-1);
+    width: 100px;
+}
+
+.screen3 .text p{
+    font-family:montras;
+    font-size: 90px;
+    transform: translateY(80px);
+}
+
+.screen3 img{
+    width: 430px;
+    position: absolute;
+    right: -27px;
+    top: -15px;
+}
+
+.screen3 .bg-ai3{
+    position: absolute;
+    right: 130px;
+    top: 450px;
+    width: 250px;
+}
+
+.screen4 {
+    position: relative;
+    display: flex;
+    width: 1100px;
+    height: 610px;
+    background: #FF87AB;
+    border: 8px solid #000000;
+    box-shadow: -11px 19px 0px #000000;
+    border-radius: 90px;
+    margin-bottom: 250px;
+    background-image: url(Images/bgscreen4.png);
+    background-size: 1000px;
+    padding: 0px 80px 0px 60px;
+    overflow: hidden;
+}
+
+.screen4 .bg-ai{
+    position: absolute;
+    right: 19px;
+    top: 0px;
+    width: 100px;
+}
+
+.screen4 img{
+    position: absolute;
+    width: 320px;
+    bottom: 73px;
+    right: 100px;
+}
+
+.screen4 .text p{
+    font-family:montras;
+    font-size: 90px;
+    transform: translateY(55px);
+}
+
+.screen4 .button{
+    /* transform: translateX(180px); */
+    left: 360px;
+    bottom: 50px;
+    position: absolute;
+}
+
+.screen4 .bg-ai4{
+    position: absolute;
+    left: -10px;
+    top: 410px;
+    width: 250px;
+    z-index: 1;
 }

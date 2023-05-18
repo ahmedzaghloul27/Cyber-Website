@@ -58,7 +58,8 @@ body {
     box-sizing: border-box;
     align-items: center;
     padding: 0px 25px 0px 25px;
-    top: 30px;
+    box-shadow: 0px 5px 10px #00000024;
+    top: 20px;
     transition: top 0.6s ease-in-out;
 }
 
@@ -193,7 +194,7 @@ footer {
     min-width: 1200px;
     background: red;
     height: 130px;
-    box-shadow: -10px 12px 0px 3px #000000;
+    box-shadow: 10px 12px 0px 3px #000000;
 }
 
 footer a {
