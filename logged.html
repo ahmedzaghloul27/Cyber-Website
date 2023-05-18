@@ -26,35 +26,22 @@
         <img src="Images/ai2.png" alt="ai1">
         <img src="Images/ai1.png" alt="ai2">
     </div>
-    <button class="back-button" onclick="goBack()"></button>
     <div class="login-screen">
-        <div class="login-body">
-            <div class="window-header">
-                <span class="line"></span>
-                <div class="circles-div">
-                    <span class="circle item1"></span>
-                    <span class="circle item2"></span>
-                    <span class="circle item3"></span>
+        <div style="position:relative">
+            <button class="back-button" onclick="goBack()"></button>
+            <div class="login-body">
+                <div class="window-header">
+                    <span class="line"></span>
+                    <div class="circles-div">
+                        <span class="circle item1"></span>
+                        <span class="circle item2"></span>
+                        <span class="circle item3"></span>
+                    </div>
                 </div>
-            </div>
- 
-            <div class="login-window">
-                <div class="continue-content">
-                    <img src="" alt="">
-                </div>
-                <div class="left-content">
-
-                    <form action="">
-                        <label for="email">
-                            <input type="email" id="email" placeholder="Email Address" required>
-                        </label>
-                        <label for="password">
-                            <input type="password" placeholder="Password" id="password" required>
-                        </label>
-                        <a href="#" class="pass"><u>Forgot Password?</u></a>
-                        <input type="submit" class="hover-effect" value="Login">
-                    </form>
-                    <p>Login</p>
+                <div class="logged-window form">
+                    <i class="fa-solid fa-check"></i>
+                    <h1>Your Account has been created successfully</h1>
+                    <a href="login.html" class="button-theme continue-button">Login</a>
                 </div>
             </div>
         </div>

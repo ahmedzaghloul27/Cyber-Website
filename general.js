@@ -74,20 +74,29 @@ function goBack() {
   window.history.back();
 }
 
+
+// ----------------------------------------------------------------
+
+
 let leftLoginWindow = document.querySelector('.login-window .left-content');
 let rightLoginWindow = document.querySelector('.login-window .right-content');
-let signWindow = document.querySelector('.sign-window');
 let signButton = document.querySelector('.login-window .sign');
+let signWindow = document.querySelector('.sign-window');
+let continueButton = document.querySelector('.sign-window .continue-button');
 
 signButton.addEventListener('click', () => {
   leftLoginWindow.style.left = '-600px';
   rightLoginWindow.style.width = '100%';
   rightLoginWindow.style.border = '0px';
   setTimeout(function() {
-    loginContainer.style.background = '#FFED4D';
     rightLoginWindow.style.right = '2000px';
-    signWindow.style.right = '0px';
+    signWindow.style.right = '-600px';
   }, 1000);
 })
+
+continueButton.addEventListener('click', () => {
+  signWindow.style.right = '0px';
+  continueButton.style.right = '700px';
+});
 
 

@@ -22,8 +22,9 @@
     background-size: 50px;
     width: 50px;
     height: 50px;
-    left: 150px;
+    left: -75px;
     top: 60px;
+    z-index: 10;
     position: absolute;
     background-repeat: no-repeat;
     background-position: -2px -4px;
@@ -39,10 +40,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 100vh;
 }
 
 .login-body{
-    top: 50px;
+
     background: #FFFCE1;
     height: 600px;
     width: 1100px;
@@ -125,7 +127,7 @@
     gap: 50px;
     width: 45%;
     border-left: 5px solid #000000;
-    transition: all .8s;
+    transition: all 1.2s;
     overflow: hidden;
 }
 
@@ -210,14 +212,14 @@
     
 } */
 
-.login-screen .left-content form {
+.login-screen .form {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 20px;
 }
 
-.login-screen .left-content form label input{
+.login-screen .form label input{
     width: 450px;
     height: 60px;
     background: #FFFFFF;
@@ -230,7 +232,7 @@
     outline: none;
 }
 
-.login-screen .left-content form label input:focus{
+.login-screen .form label input:focus{
     outline: 3px solid black;
     outline-offset: -1px;
     background-color: #ffd9d9;
@@ -256,7 +258,7 @@
     color: #9b0000;
 }
 
-form input[type=submit],
+.form input[type=submit],
 .sign, .button-theme {
     font-size: 35px;
     text-align: center;
@@ -272,14 +274,14 @@ form input[type=submit],
     cursor: pointer;
 }
 
-form input[type=submit]:hover,
+.form input[type=submit]:hover,
 .sign:hover , .button-theme:hover{
     box-shadow: 0px 0px 0px black;
     transform: translate(0px, 0px);
     transition: all .1s ease;
 }
 
-form input[type=submit]:active,
+.form input[type=submit]:active,
 .sign:active, .button-theme:active {
     background: #ffa238;
     transition: all 0.1s ease;
@@ -299,14 +301,14 @@ form input[type=submit]:active,
     top: 50px;
     background: #FFFCE1;
     height: 545px;
-    width: 1100px;
+    width: 1700px;
     display: flex;
     flex-direction: column;
     overflow: hidden;
     background-image: url(Images/background-window.png);
     background-size: 500px;
     position: absolute;
-    right: -1100px;
+    right: -1700px;
     z-index: 1;
     transition: all .5s;
 }
@@ -351,8 +353,8 @@ form input[type=submit]:active,
 }
 .sign-window .right-content a{
     position: absolute;
-    bottom: 20px;
-    right: 20px;
+    bottom: 25px;
+    right: 50px;
 }
 
 .continue-content{
@@ -362,10 +364,53 @@ form input[type=submit]:active,
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    gap: 15px;
 }
-.continue-content img{
-    width: 35%;
-    background: red;
+.continue-content .user-img{
+    position: relative;
+    width:60%;
+    height:60%;
+}
+.continue-content .user-img img{
     border-radius: 50%;
     border: 5px solid black;
+    width:100%;
+    height:100%;
+}
+.continue-content .user-img i{
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    font-size: 40px;
+    padding: 15px;
+    border-radius: 50%;
+    background: #C5FFA8;
+    border: 5px solid black;
+    cursor: pointer;
+}
+.logged-window{
+    position: relative;
+    display: flex;
+    padding-top: 100px;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    background: #FFED4D;
+}
+.logged-window h1{
+    
+}
+.logged-window i{
+    bottom: 15px;
+    right: 15px;
+    font-size: 60px;
+    padding: 15px;
+    border-radius: 50%;
+    background: #C5FFA8;
+    border: 5px solid black;
+}
+.logged-window a{
+    position: absolute;
+    bottom: 40px;
 }
