@@ -28,7 +28,7 @@
     </div>
     <button class="back-button" onclick="goBack()"></button>
     <div class="login-screen">
-        <div class="login-window">
+        <div class="login-body">
             <div class="window-header">
                 <span class="line"></span>
                 <div class="circles-div">
@@ -37,40 +37,76 @@
                     <span class="circle item3"></span>
                 </div>
             </div>
-            <div class="right-content">
-                <div class="text">
-                    <p>Hello, Friend!</p>
-                    <p>Enter your details to start your<br>journey with us</p>
+            <div class="sign-window">
+                <div class="window-content">
+                    <div class="left-content">
+                        <form action="">
+                            <div class="name-div">
+                                <label for="fullname">
+                                    <input type="text" name="firstName"  placeholder="First Name">    
+                                </label>
+                                <label for="email">
+                                    <input type="text" name="lastName" placeholder="Last Name">
+                                </label>
+                            </div>
+                            <label for="email">
+                                <input type="email" name="email" placeholder="Email Address" required>
+                            </label>
+                            <label for="bday">
+                                <input type="date" name="Birthday" placeholder="Birthday" required>
+                            </label>
+                            <label for="password">
+                                <input type="password" placeholder="Password" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
+                                title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
+                            </label>
+                            <label for="password">
+                                <input type="password" placeholder="Confirm password" name="password" required>
+                            </label>
+                            <a href="#" class="pass"><u>already have an account? login</u></a>
+                        </form>
+                        <!-- <p>Sign Up</p> -->
+                    </div>
+                    <div class="right-content">
+                        <img src="Images/sign-bg.png" alt="">
+                        <a href="#" class="button-theme">Continue</a>
+                    </div>
                 </div>
-                <a href="#" class="sign hover-effect">Sign Up</a>
             </div>
-            <div class="left-content">
-                <div class="buttons">
-                    <div class="button hover-effect">
-                        <a href="#" title="login with facebook"><img src="Images/facebook.png" alt="facebook"></a>
+            <div class="login-window">
+                <div class="right-content">
+                    <div class="text">
+                        <p>Hello, Friend!</p>
+                        <p>Enter your details to start your<br>journey with us</p>
                     </div>
-                    <div class="button hover-effect">
-                        <a href="#" title="login with google"><img src="Images/google.png" alt="google"></a>
-                    </div>
-                    <div class="button hover-effect">
-                        <a href="#" title="login with apple"><img src="Images/apple-logo.png" alt="apple"></a>
-                    </div>
+                    <a href="#" class="sign hover-effect">Sign Up</a>
                 </div>
-
-                <form action="">
-                    <label for="email">
-                        <input type="email" id="email" placeholder="Email Address" required>
-                    </label>
-                    <label for="password">
-                        <input type="password" placeholder="Password" id="password" required>
-                    </label>
-                    <a href="#" class="pass"><u>Forgot Password?</u></a>
-                    <input type="submit" class="hover-effect" value="Login">
-                </form>
-                <p>Login</p>
+                <div class="left-content">
+                    <div class="buttons">
+                        <div class="button hover-effect">
+                            <a href="#" title="login with facebook"><img src="Images/facebook.png" alt="facebook"></a>
+                        </div>
+                        <div class="button hover-effect">
+                            <a href="#" title="login with google"><img src="Images/google.png" alt="google"></a>
+                        </div>
+                        <div class="button hover-effect">
+                            <a href="#" title="login with apple"><img src="Images/apple-logo.png" alt="apple"></a>
+                        </div>
+                    </div>
+    
+                    <form action="">
+                        <label for="email">
+                            <input type="email" id="email" placeholder="Email Address" required>
+                        </label>
+                        <label for="password">
+                            <input type="password" placeholder="Password" id="password" required>
+                        </label>
+                        <a href="#" class="pass"><u>Forgot Password?</u></a>
+                        <input type="submit" class="hover-effect" value="Login">
+                    </form>
+                    <p>Login</p>
+                </div>
             </div>
         </div>
-
     </div>
 
     <script src="general.js"></script>

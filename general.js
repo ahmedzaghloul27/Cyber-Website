@@ -88,13 +88,20 @@ function goBack() {
 // })
 
 
+let loginContainer = document.querySelector('.login-body');
 let leftLoginWindow = document.querySelector('.login-window .left-content');
 let rightLoginWindow = document.querySelector('.login-window .right-content');
+let signWindow = document.querySelector('.sign-window');
 let signButton = document.querySelector('.login-window .sign');
 
 signButton.addEventListener('click', () => {
   leftLoginWindow.style.left = '-600px';
   rightLoginWindow.style.width = '100%';
   rightLoginWindow.style.border = '0px';
+  setTimeout(function() {
+    loginContainer.style.background = '#FFED4D';
+    rightLoginWindow.style.right = '2000px';
+    signWindow.style.right = '0px';
+  }, 1000);
 })
 
