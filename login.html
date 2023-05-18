@@ -38,48 +38,7 @@
                         <span class="circle item3"></span>
                     </div>
                 </div>
-                <div class="sign-window">
-                    <div class="window-content">
-                        <div class="left-content">
-                            <div action="" class="form">
-                                <label for="name">
-                                    <input type="text" name="name"  placeholder="Name">    
-                                </label>
-                                <label for="email">
-                                    <input type="email" name="email" placeholder="Email Address" required>
-                                </label>
-                                <label for="bday">
-                                    <input type="date" name="Birthday" placeholder="Birthday" required>
-                                </label>
-                                <label for="password">
-                                    <input type="password" placeholder="Password" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
-                                    title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
-                                </label>
-                                <label for="password">
-                                    <input type="password" placeholder="Confirm password" name="password" required>
-                                </label>
-                                <a href="#" class="pass"><u>already have an account? login</u></a>
-                            </div>
-                        </div>
-                        <div class="right-content">
-                            <img src="Images/sign-bg.png" alt="">
-                            <a href="#" class="button-theme continue-button">Continue</a>
-                        </div>
-                        <div class="continue-content form">
-                            <div class="user-img">
-                                <img src="Images/game-pic.png" alt="">
-                                <i class="fa-solid fa-pen"></i>
-                            </div>
-                            <label for="email">
-                                <input type="email" id="email" placeholder="User Name" required>
-                            </label>
-                            <a href="logged.html">
-                                <input type="submit" class="hover-effect" value="Sign Up">
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="login-window">
+                <form class="login-window" action="includes/login.inc.php" method="post">
                     <div class="right-content">
                         <div class="text">
                             <p>Hello, Friend!</p>
@@ -99,20 +58,61 @@
                                 <a href="#" title="login with apple"><img src="Images/apple-logo.png" alt="apple"></a>
                             </div>
                         </div>
-        
+                        
                         <div action="" class="form">
                             <label for="email">
-                                <input type="email" id="email" placeholder="Email Address" required>
+                                <input type="text" name="login" placeholder="Email or username" required>
                             </label>
                             <label for="password">
-                                <input type="password" placeholder="Password" id="password" required>
+                                <input type="password" placeholder="Password" name="password" required>
                             </label>
                             <a href="#" class="pass"><u>Forgot Password?</u></a>
-                            <input type="submit" class="hover-effect" value="Login">
+                            <input type="submit" name="submit" class="hover-effect" value="Login">
                         </div>
                         <p>Login</p>
                     </div>
-                </div>
+                </form>
+                <form class="sign-window" action="includes/signup.php" method="post">
+                    <div class="window-content">
+                        <div class="left-content">
+                            <div action="" class="form">
+                                <label for="name">
+                                    <input type="text" name="name"  placeholder="Name">    
+                                </label>
+                                <label for="email">
+                                    <input type="email" name="email" placeholder="Email Address" required>
+                                </label>
+                                <label for="bdate">
+                                    <input type="date" name="bdate" placeholder="Birthday">
+                                </label>
+                                <label for="password">
+                                    <input type="password" id="reg-password" placeholder="Password" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
+                                    title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
+                                </label>
+                                <label for="password">
+                                    <input type="password" id="reg-password-confirm" placeholder="Confirm password" name="password" required>
+                                </label>
+                                <a href="#" class="pass"><u>already have an account? login</u></a>
+                            </div>
+                        </div>
+                        <div class="right-content">
+                            <img src="Images/sign-bg.png" alt="">
+                            <a class="button-theme continue-button">Continue</a>
+                        </div>
+                        <div class="continue-content form">
+                            <div class="user-img">
+                                <img src="Images/game-pic.png" alt="">
+                                <input type="file" class="fa-solid fa-pen">
+                            </div>
+                            <label for="uname">
+                                <input type="text" name="uname" id="email" placeholder="User Name"  required>
+                            </label>
+                            <a>
+                                <input type="submit" class="hover-effect" value="Sign Up" name="submit">
+                            </a>
+                        </div>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
