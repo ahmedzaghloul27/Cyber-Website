@@ -26,51 +26,95 @@
         <img src="Images/ai2.png" alt="ai1">
         <img src="Images/ai1.png" alt="ai2">
     </div>
-    <button class="back-button" onclick="goBack()"></button>
     <div class="login-screen">
-        <div class="login-window">
-            <div class="window-header">
-                <span class="line"></span>
-                <div class="circles-div">
-                    <span class="circle item1"></span>
-                    <span class="circle item2"></span>
-                    <span class="circle item3"></span>
-                </div>
-            </div>
-            <div class="right-content">
-                <div class="text">
-                    <p>Hello, Friend!</p>
-                    <p>Enter your details to start your<br>journey with us</p>
-                </div>
-                <a href="#" class="sign hover-effect">Sign Up</a>
-            </div>
-            <div class="left-content">
-                <div class="buttons">
-                    <div class="button hover-effect">
-                        <a href="#" title="login with facebook"><img src="Images/facebook.png" alt="facebook"></a>
-                    </div>
-                    <div class="button hover-effect">
-                        <a href="#" title="login with google"><img src="Images/google.png" alt="google"></a>
-                    </div>
-                    <div class="button hover-effect">
-                        <a href="#" title="login with apple"><img src="Images/apple-logo.png" alt="apple"></a>
+        <div style="position:relative">
+            <button class="back-button" onclick="goBack()"></button>
+            <div class="login-body">
+                <div class="window-header">
+                    <span class="line"></span>
+                    <div class="circles-div">
+                        <span class="circle item1"></span>
+                        <span class="circle item2"></span>
+                        <span class="circle item3"></span>
                     </div>
                 </div>
-
-                <form action="">
-                    <label for="email">
-                        <input type="email" id="email" placeholder="Email Address" required>
-                    </label>
-                    <label for="password">
-                        <input type="password" placeholder="Password" id="password" required>
-                    </label>
-                    <a href="#" class="pass"><u>Forgot Password?</u></a>
-                    <input type="submit" class="hover-effect" value="Login">
-                </form>
-                <p>Login</p>
+                <div class="sign-window">
+                    <div class="window-content">
+                        <div class="left-content">
+                            <div action="" class="form">
+                                <label for="name">
+                                    <input type="text" name="name"  placeholder="Name">    
+                                </label>
+                                <label for="email">
+                                    <input type="email" name="email" placeholder="Email Address" required>
+                                </label>
+                                <label for="bday">
+                                    <input type="date" name="Birthday" placeholder="Birthday" required>
+                                </label>
+                                <label for="password">
+                                    <input type="password" placeholder="Password" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
+                                    title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
+                                </label>
+                                <label for="password">
+                                    <input type="password" placeholder="Confirm password" name="password" required>
+                                </label>
+                                <a href="#" class="pass"><u>already have an account? login</u></a>
+                            </div>
+                        </div>
+                        <div class="right-content">
+                            <img src="Images/sign-bg.png" alt="">
+                            <a href="#" class="button-theme continue-button">Continue</a>
+                        </div>
+                        <div class="continue-content form">
+                            <div class="user-img">
+                                <img src="Images/game-pic.png" alt="">
+                                <i class="fa-solid fa-pen"></i>
+                            </div>
+                            <label for="email">
+                                <input type="email" id="email" placeholder="User Name" required>
+                            </label>
+                            <a href="logged.html">
+                                <input type="submit" class="hover-effect" value="Sign Up">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="login-window">
+                    <div class="right-content">
+                        <div class="text">
+                            <p>Hello, Friend!</p>
+                            <p>Enter your details to start your<br>journey with us</p>
+                        </div>
+                        <a href="#" class="sign hover-effect">Sign Up</a>
+                    </div>
+                    <div class="left-content">
+                        <div class="buttons">
+                            <div class="button hover-effect">
+                                <a href="#" title="login with facebook"><img src="Images/facebook.png" alt="facebook"></a>
+                            </div>
+                            <div class="button hover-effect">
+                                <a href="#" title="login with google"><img src="Images/google.png" alt="google"></a>
+                            </div>
+                            <div class="button hover-effect">
+                                <a href="#" title="login with apple"><img src="Images/apple-logo.png" alt="apple"></a>
+                            </div>
+                        </div>
+        
+                        <div action="" class="form">
+                            <label for="email">
+                                <input type="email" id="email" placeholder="Email Address" required>
+                            </label>
+                            <label for="password">
+                                <input type="password" placeholder="Password" id="password" required>
+                            </label>
+                            <a href="#" class="pass"><u>Forgot Password?</u></a>
+                            <input type="submit" class="hover-effect" value="Login">
+                        </div>
+                        <p>Login</p>
+                    </div>
+                </div>
             </div>
         </div>
-
     </div>
 
     <script src="general.js"></script>

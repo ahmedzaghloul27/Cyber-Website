@@ -22,8 +22,9 @@
     background-size: 50px;
     width: 50px;
     height: 50px;
-    left: 150px;
-    top: 60px;
+    left: -65px;
+    top: 20px;
+    z-index: 10;
     position: absolute;
     background-repeat: no-repeat;
     background-position: -2px -4px;
@@ -33,24 +34,39 @@
 
 /* ------------------login--------------------- */
 
+
 .login-screen {
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 100vh;
+}
+
+.login-body{
+
+    background: #FFFCE1;
+    height: 600px;
+    width: 1100px;
+    display: flex;
+    border-radius: 30px;
+    flex-direction: column;
+    overflow: hidden;
+    border: 5px solid black;
+    background-image: url(Images/background-window.png);
+    background-size: 500px;
+    position: relative;
 }
 
 .login-window {
     position: absolute;
-    top: 50px;
     background: #FFFCE1;
     height: 600px;
     width: 1100px;
     display: flex;
     flex-direction: column;
     border-radius: 30px;
-    overflow: hidden;
-    border: 5px solid black;
+    /* overflow: hidden; */
     background-image: url(Images/background-window.png);
     background-size: 500px;
 }
@@ -64,7 +80,8 @@
     align-items: center;
     width: auto;
     justify-content: space-between;
-    z-index: 1;
+    z-index: 2;
+    width: 100%;
 }
 
 .circles-div {
@@ -110,7 +127,8 @@
     gap: 50px;
     width: 45%;
     border-left: 5px solid #000000;
-    transition: all .5s;
+    transition: all 1.2s;
+    overflow: hidden;
 }
 
 .login-window .right-content p {
@@ -194,14 +212,14 @@
     
 } */
 
-.login-screen .left-content form {
+.login-screen .form {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 20px;
 }
 
-.login-screen .left-content form label input{
+.login-screen .form label input{
     width: 450px;
     height: 60px;
     background: #FFFFFF;
@@ -214,7 +232,7 @@
     outline: none;
 }
 
-.login-screen .left-content form label input:focus{
+.login-screen .form label input:focus{
     outline: 3px solid black;
     outline-offset: -1px;
     background-color: #ffd9d9;
@@ -240,7 +258,7 @@
     color: #9b0000;
 }
 
-form input[type=submit],
+.form input[type=submit],
 .sign, .button-theme {
     font-size: 35px;
     text-align: center;
@@ -256,14 +274,14 @@ form input[type=submit],
     cursor: pointer;
 }
 
-form input[type=submit]:hover,
+.form input[type=submit]:hover,
 .sign:hover , .button-theme:hover{
     box-shadow: 0px 0px 0px black;
     transform: translate(0px, 0px);
     transition: all .1s ease;
 }
 
-form input[type=submit]:active,
+.form input[type=submit]:active,
 .sign:active, .button-theme:active {
     background: #ffa238;
     transition: all 0.1s ease;
@@ -282,21 +300,19 @@ form input[type=submit]:active,
 .sign-window{
     top: 50px;
     background: #FFFCE1;
-    height: 600px;
-    width: 1100px;
+    height: 545px;
+    width: 1700px;
     display: flex;
-    border-radius: 30px;
     flex-direction: column;
     overflow: hidden;
-    border: 5px solid black;
     background-image: url(Images/background-window.png);
     background-size: 500px;
+    position: absolute;
+    right: -1700px;
+    z-index: 1;
+    transition: all .5s;
 }
-.sign-window .window-header{
-    width: 100%;
-    font-size: 30px;
-    font-weight: 800;
-}
+
 .sign-window .window-header span{
     color: white ;
 }
@@ -314,15 +330,6 @@ form input[type=submit]:active,
     margin-top: 50px;
 }
 
-.sign-window .left-content .name-div{
-    display: flex;
-    gap: 15px;
-    width: 83%;
-}
-.sign-window .left-content .name-div input{
-    width: 100% !important; 
-    border: 2px solid darkgrey;
-}
 .sign-window .right-content{
     position: relative;
     width: 50%;
@@ -337,6 +344,64 @@ form input[type=submit]:active,
 }
 .sign-window .right-content a{
     position: absolute;
-    bottom: 20px;
-    right: 20px;
+    bottom: 25px;
+    right: 50px;
+}
+
+.continue-content{
+    width: 50%;
+    height: 100%;
+    background: #FFED4D !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+}
+.continue-content .user-img{
+    position: relative;
+    width:60%;
+    height:60%;
+}
+.continue-content .user-img img{
+    border-radius: 50%;
+    border: 5px solid black;
+    width:100%;
+    height:100%;
+}
+.continue-content .user-img i{
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    font-size: 40px;
+    padding: 15px;
+    border-radius: 50%;
+    background: #C5FFA8;
+    border: 5px solid black;
+    cursor: pointer;
+}
+.logged-window{
+    position: relative;
+    display: flex;
+    padding-top: 100px;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    background: #FFED4D;
+}
+.logged-window h1{
+    
+}
+.logged-window i{
+    bottom: 15px;
+    right: 15px;
+    font-size: 60px;
+    padding: 15px;
+    border-radius: 50%;
+    background: #C5FFA8;
+    border: 5px solid black;
+}
+.logged-window a{
+    position: absolute;
+    bottom: 40px;
 }
