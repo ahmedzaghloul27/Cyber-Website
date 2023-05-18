@@ -33,7 +33,8 @@
 
 /* ------------------login--------------------- */
 
-.screen {
+.login-screen {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -193,14 +194,14 @@
     
 } */
 
-.login-window .left-content form {
+.login-screen .left-content form {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 20px;
 }
 
-.login-window .left-content form label input{
+.login-screen .left-content form label input{
     width: 450px;
     height: 60px;
     background: #FFFFFF;
@@ -213,13 +214,13 @@
     outline: none;
 }
 
-.login-window .left-content form label input:focus{
+.login-screen .left-content form label input:focus{
     outline: 3px solid black;
     outline-offset: -1px;
     background-color: #ffd9d9;
 }
 
-.login-window .left-content {
+.login-screen .left-content {
     width: 600px;
     padding: 30px;
     display: flex;
@@ -229,11 +230,11 @@
     align-items: center;
 }
 
-.login-window .left-content a {
+.login-screen .left-content a {
     font-size: 20px;
 }
 
-.login-window .left-content p {
+.login-screen .left-content p {
     font-size: 40px;
     font-weight: 700;
     color: #9b0000;
@@ -271,6 +272,13 @@ form input[type=submit]:active,
 
 
 
+/* -----------------sign in */
+.sing-window{
+    position: fixed;
+    background: red;
+    height: 200px;
+    width: 200px;
+}
 .create-acc-container .name-div, .gender-button{
     display: flex;
     gap: 10px;
