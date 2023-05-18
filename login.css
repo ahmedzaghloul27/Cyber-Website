@@ -307,6 +307,7 @@ form input[type=submit]:active,
     display: flex;
     justify-content:space-between;
     padding-top: 0px;
+    background: #FFED4D;
 }
 .sign-window .left-content{
     width: 50% ; 
@@ -324,14 +325,13 @@ form input[type=submit]:active,
 }
 .sign-window .right-content{
     position: relative;
-    background-image: url(Images/sign-bg.png);
-    background-size: 70%;
-    background-position: center top;
-    background-repeat: no-repeat;
     width: 50%;
 }
 .sign-window .right-content img{
-    position: relative;
+    mix-blend-mode: darken;
+    position: absolute;
+    left: 110px;
+    top: 50px;
     height: 70%;
     box-sizing: border-box;
 }
