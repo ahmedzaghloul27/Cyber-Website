@@ -70,6 +70,7 @@ function onlyOne(check) {
   })
 }
 
+
 function goBack() {
   window.history.back();
 }
