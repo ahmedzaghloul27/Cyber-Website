@@ -80,8 +80,8 @@ function validEmail($email){
 //     return preg_match('/^(01)[0-9]{9}$/', $phone);
 // }
 
-function createUser($conn, $name, $email, $uname, $password){
-    $sql = "INSERT INTO users (name,email,password,uname) VALUES (?,?,?,?)";
+function createUser($conn, $name, $email, $uname, $password, $bdate){
+    $sql = "INSERT INTO users (name,email,password,uname,bdate) VALUES (?,?,?,?,?)";
     $stmt = mysqli_stmt_init($conn);
 
     if (!mysqli_stmt_prepare($stmt,$sql)){
@@ -90,7 +90,7 @@ function createUser($conn, $name, $email, $uname, $password){
     }
     $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 
-    mysqli_stmt_bind_param($stmt, "ssss", $name, $email, $hashedPassword, $uname);
+    mysqli_stmt_bind_param($stmt, "ssssi", $name, $email, $hashedPassword, $uname,$bdate);
     mysqli_stmt_execute($stmt);
     mysqli_stmt_close($stmt);
     header("location: ../logged.html?error=none");

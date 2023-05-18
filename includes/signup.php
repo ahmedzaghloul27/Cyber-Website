@@ -1,11 +1,15 @@
 <?php
 
 if(isset($_POST["submit"])){
-     $name = $_POST["name"];
-     $email = $_POST["email"];
-     $uname = $_POST["uname"];
-     $password = $_POST["password"];
-    //  $birthday = $_POST["birthday"];
+    $name = $_POST["name"];
+    $email = $_POST["email"];
+    $uname = $_POST["uname"];
+    $password = $_POST["password"];
+    $gender = $_POST["gender"];
+    $gender = $_POST["img"];
+    
+    $bdate = strtotime($_POST["bdate"]);
+    $bdate = date('Y-m-d', $bdate);
 
 
      require_once 'dbh.php';
@@ -28,7 +32,7 @@ if(isset($_POST["submit"])){
         exit();
     }
 
-    createUser($conn, $name, $email, $uname, $password);
+    createUser($conn, $name, $email, $uname, $password, $bdate);
 
 } else{
     header("location: ../login.html?error=invalidpassword");
