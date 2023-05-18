@@ -86,3 +86,15 @@ function goBack() {
 // document.addEventListener('DOMContentLoaded', function(event) {
 //     document.querySelector('body').style.opacity = 1
 // })
+
+
+let leftLoginWindow = document.querySelector('.login-window .left-content');
+let rightLoginWindow = document.querySelector('.login-window .right-content');
+let signButton = document.querySelector('.login-window .sign');
+
+signButton.addEventListener('click', () => {
+  leftLoginWindow.style.left = '-600px';
+  rightLoginWindow.style.width = '100%';
+  rightLoginWindow.style.border = '0px';
+})
+

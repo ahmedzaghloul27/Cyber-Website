@@ -54,7 +54,7 @@
     background-size: 500px;
 }
 
-.login-window-header {
+.window-header {
     background: #fd5050;
     border-bottom: solid 5px black;
     height: 60px;
@@ -71,7 +71,7 @@
     gap: 10px;
 }
 
-.login-window-header .line {
+.window-header .line {
     width: 130px;
     border: 7px solid rgb(73, 73, 73);
     border-radius: 50px;
@@ -106,10 +106,10 @@
     position: absolute;
     height: 100%;
     background: #FFED4D;
-    width: 500px;
     gap: 50px;
+    width: 45%;
     border-left: 5px solid #000000;
-
+    transition: all .5s;
 }
 
 .login-window .right-content p {
@@ -164,8 +164,9 @@
     margin-top: 55px;
     display: flex;
     flex-direction: column;
-
     gap: 30px;
+    left: 0;
+    transition: all .5s;
 }
 
 
@@ -263,8 +264,19 @@ form input[type=submit]:hover,
 
 form input[type=submit]:active,
 .sign:active {
-    height: 100%;
     background: #ffa238;
     transition: all 0.1s ease;
 }
 
+
+
+
+.create-acc-container .name-div, .gender-button{
+    display: flex;
+    gap: 10px;
+    width: 100%;
+}
+.create-acc-container .name-div input{
+    width: 100%;
+    border: 2px solid darkgrey;
+}
