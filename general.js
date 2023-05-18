@@ -74,20 +74,6 @@ function goBack() {
   window.history.back();
 }
 
-// --------------------------transition page----------------------------
-
-// window.transitionToPage = function(href) {
-//     document.querySelector('body').style.opacity = 0
-//     setTimeout(function() {
-//         window.location.href = href
-//     }, 500)
-// }
-
-// document.addEventListener('DOMContentLoaded', function(event) {
-//     document.querySelector('body').style.opacity = 1
-// })
-
-
 let leftLoginWindow = document.querySelector('.login-window .left-content');
 let rightLoginWindow = document.querySelector('.login-window .right-content');
 let signButton = document.querySelector('.login-window .sign');
@@ -97,4 +83,5 @@ signButton.addEventListener('click', () => {
   rightLoginWindow.style.width = '100%';
   rightLoginWindow.style.border = '0px';
 })
+
 

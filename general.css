@@ -191,6 +191,7 @@ ul {
 
 footer{
     display: flex;
+    position: sticky;
     min-width: 1200px;
     background: red;
     width: 90%;
