@@ -76,41 +76,6 @@ function goBack() {
 }
 
 
-const Action = document.querySelector('.Action .game-card-container');
-const Arcade = document.querySelector('.Arcade .game-card-container');
-const Adventrure = document.querySelector('.Adventrure .game-card-container');
-
-const gameCards = [
-  { name: 'Game 1', image: 'Images/game1.jpg', genre: Action },
-  { name: 'Game 2', image: 'Images/game2.jpg', genre: Arcade },
-  { name: 'Game 3', image: 'Images/etshov2.jpg', genre: Adventrure },
-  { name: 'crazy baby', image: 'Images/etshov2.jpg', genre: Arcade },
-];
-
-
-gameCards.forEach((card) => {
-
-  const gameCard = document.createElement('div');
-  gameCard.classList.add('game-card');
-
-  const gameThumb = document.createElement('div');
-  gameThumb.classList.add('game-thumb');
-  const image = document.createElement('img');
-  image.src = card.image;
-  gameThumb.appendChild(image);
-
-  const gameName = document.createElement('h2');
-  gameName.textContent = card.name;
-
-  const downloadButton = document.createElement('button');
-  downloadButton.textContent = 'Download';
-
-  gameCard.appendChild(gameThumb);
-  gameCard.appendChild(gameName);
-  gameCard.appendChild(downloadButton);
-
-  card.genre.appendChild(gameCard);
-});
 
 // ----------------------------------------------------------------
 
@@ -158,3 +123,40 @@ confirm_password.onkeyup = validatePassword;
 
 // -----------------add game library
 
+function gameLibrary(){
+    const Action = document.querySelector('.Action .game-card-container');
+    const Arcade = document.querySelector('.Arcade .game-card-container');
+    const Adventrure = document.querySelector('.Adventrure .game-card-container');
+
+    const gameCards = [
+      { name: 'Game 1', image: 'Images/game1.jpg', genre: Action },
+      { name: 'Game 2', image: 'Images/game2.jpg', genre: Arcade },
+      { name: 'Game 3', image: 'Images/etshov2.jpg', genre: Adventrure },
+      { name: 'crazy baby', image: 'Images/etshov2.jpg', genre: Arcade },
+    ];
+
+    gameCards.forEach((card) => {
+
+      const gameCard = document.createElement('div');
+      gameCard.classList.add('game-card');
+
+      const gameThumb = document.createElement('div');
+      gameThumb.classList.add('game-thumb');
+      const image = document.createElement('img');
+      image.src = card.image;
+      gameThumb.appendChild(image);
+
+      const gameName = document.createElement('h2');
+      gameName.textContent = card.name;
+
+      const downloadButton = document.createElement('button');
+      downloadButton.textContent = 'Download';
+
+      gameCard.appendChild(gameThumb);
+      gameCard.appendChild(gameName);
+      gameCard.appendChild(downloadButton);
+      card.genre.appendChild(gameCard);
+
+    });
+
+}
