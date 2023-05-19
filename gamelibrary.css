@@ -59,18 +59,24 @@
     .library-filter-buttons form label{
         padding: 5px 10px;
     border-radius: 30px;
-    border: 3px solid black;
+    border: 4px solid black;
     font-weight: 400;
     height: 55px;
     font-size: 25px;
     background-color: white;
     cursor: pointer;
+    transform: translate(-5px, -5px);
+    transition: all .1s;
+    box-shadow: 5px 5px 0px black;
     }
 
     .library-filter-buttons form input[type="checkbox"]:checked + label{
-        color: rgb(191, 0, 0);
-        font-weight: 700;
-        border: 4px solid;
+        font-weight: 500;
+        box-shadow: 0;
+        transition: all .1s;
+        background-color: #9cff72;
+        box-shadow: 0px 0px 0px black;
+        transform: translate(0px, 0px);
     }
 
     
@@ -96,7 +102,7 @@
 .genre-container{
     display: flex;
     flex-direction: column;
-    gap: 200px;
+    gap: 70px;
     justify-content: center;
     align-items: center;
     margin-top: 50px;

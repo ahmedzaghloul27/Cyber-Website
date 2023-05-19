@@ -156,5 +156,5 @@ confirm_password.onkeyup = validatePassword;
 
 
 
-// -----------------add game liberary
+// -----------------add game library
 
