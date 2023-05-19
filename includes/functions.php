@@ -96,6 +96,21 @@ function createUser($conn, $name, $email, $uname, $password, $bdate){
     header("location: ../logged.html?error=none");
     exit();
 }
+function addGame($conn, $title, $description, $genre, $image){
+    $sql = "INSERT INTO games (title,description,genre,image) VALUES (?,?,?,?)";
+    $stmt = mysqli_stmt_init($conn);
+
+    if (!mysqli_stmt_prepare($stmt,$sql)){
+        header("location: ../login.html?error=stmtfailed");
+        exit();
+    }
+
+    mysqli_stmt_bind_param($stmt, "sssb", $title, $description, $genre, $image);
+    mysqli_stmt_execute($stmt);
+    mysqli_stmt_close($stmt);
+    header("location: ../addgame.html?game-add=added");
+    exit();
+}
 
 
 
