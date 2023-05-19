@@ -739,41 +739,44 @@ footer a {
 
 /* ****************************game-library.css*************************************** */
 
-.library-body{
+.library-body {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 
 }
-.library-header{
+
+.library-header {
     display: flex;
     flex-direction: column;
     gap: 50px;
-    
+
 }
-.library-header>h1{
+
+.library-header>h1 {
     text-align: center;
 }
 
-.library-header h1:nth-child(1){
-    
-    font-family:montras;
-    font-size: 80px;
-}
-.library-header h1:nth-child(2){
-    font-family:montras;
+.library-header h1:nth-child(1) {
+
+    font-family: montras;
     font-size: 80px;
 }
 
-.library-filter-browse{
+.library-header h1:nth-child(2) {
+    font-family: montras;
+    font-size: 80px;
+}
+
+.library-filter-browse {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     /* background: red; */
 }
 
-.library-filter-buttons{
+.library-filter-buttons {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -786,19 +789,19 @@ footer a {
 
 }
 
-.library-filter-buttons form{
+.library-filter-buttons form {
     display: flex;
     gap: 10px;
 }
 
-    .library-filter-buttons form input[type="checkbox"]{
-        opacity: 0;
-        position: fixed;
-        width: 0;
-    }
+.library-filter-buttons form input[type="checkbox"] {
+    opacity: 0;
+    position: fixed;
+    width: 0;
+}
 
-    .library-filter-buttons form label{
-        padding: 5px 10px;
+.library-filter-buttons form label {
+    padding: 5px 10px;
     border-radius: 30px;
     border: 4px solid black;
     font-weight: 400;
@@ -809,19 +812,19 @@ footer a {
     transform: translate(-5px, -5px);
     transition: all .1s;
     box-shadow: 5px 5px 0px black;
-    }
+}
 
-    .library-filter-buttons form input[type="checkbox"]:checked + label{
-        font-weight: 500;
-        box-shadow: 0;
-        transition: all .1s;
-        background-color: #9cff72;
-        box-shadow: 0px 0px 0px black;
-        transform: translate(0px, 0px);
-    }
+.library-filter-buttons form input[type="checkbox"]:checked+label {
+    font-weight: 500;
+    box-shadow: 0;
+    transition: all .1s;
+    background-color: #9cff72;
+    box-shadow: 0px 0px 0px black;
+    transform: translate(0px, 0px);
+}
 
-    
-.filter-search input{
+
+.filter-search input {
     height: 53px;
     background: white;
     display: flex;
@@ -834,13 +837,14 @@ footer a {
     outline: none;
     border: 3px solid black;
 }
-.filter-search span{
+
+.filter-search span {
     font-size: 40px;
 }
 
 /* --------------------------------------------------- */
 
-.genre-container{
+.genre-container {
     display: flex;
     flex-direction: column;
     gap: 70px;
@@ -849,12 +853,13 @@ footer a {
     margin-top: 50px;
     margin-bottom: 360px;
 }
-.genre-container p{
+
+.genre-container p {
     font-size: 40px;
     font-weight: 900;
 }
 
-.genre1{
+.genre1 {
     /* background-image: url(Images/library-bg.svg);
     background-size: contain;
     background-repeat: no-repeat;
@@ -865,16 +870,19 @@ footer a {
     padding: 50px 0;
     position: relative;
 }
-.game-card-container{
+
+.game-card-container {
     padding: 20px 0;
     display: flex;
     gap: 50px;
     overflow: scroll;
 }
-.game-card-container::-webkit-scrollbar{
+
+.game-card-container::-webkit-scrollbar {
     display: none;
 }
-.genre-container .right-arrow{
+
+.genre-container .right-arrow {
     position: absolute;
     height: 350px;
     background: transparent;
@@ -883,11 +891,13 @@ footer a {
     right: -90px;
     top: 150px;
 }
-.genre-container .right-arrow span{
+
+.genre-container .right-arrow span {
     padding-right: 10px;
     color: black;
 }
-.genre-container .left-arrow{
+
+.genre-container .left-arrow {
     position: absolute;
     height: 350px;
     background: transparent;
@@ -896,12 +906,14 @@ footer a {
     left: -90px;
     top: 150px;
 }
-.genre-container .left-arrow span{
+
+.genre-container .left-arrow span {
     padding-left: 10px;
     border-radius: 20px;
     color: black;
 }
-.game-card{
+
+.game-card {
     height: 400px;
     min-width: 300px;
     background: white;
@@ -914,27 +926,28 @@ footer a {
     text-align: center;
 }
 
-.game-card .game-thumb{
+.game-card .game-thumb {
     display: flex;
     align-items: center;
     justify-content: center;
     height: 240px;
     width: 100%;
-    border-bottom:5px solid ;
+    border-bottom: 5px solid;
 }
 
-.game-card .game-thumb img{
+.game-card .game-thumb img {
     height: 100%;
     width: 100%;
-    object-fit:cover;
+    object-fit: cover;
 }
-.game-card h2{
+
+.game-card h2 {
     margin: 0 5px;
-    text-align:center;
+    text-align: center;
     height: 70px;
 }
 
-.game-card button{
+.game-card button {
     border: 3px solid black;
     background: #EBFF00;
     padding: 5px 5px;
@@ -990,7 +1003,7 @@ footer a {
     height: 100vh;
 }
 
-.login-body{
+.login-body {
 
     background: #FFFCE1;
     height: 600px;
@@ -1120,7 +1133,7 @@ footer a {
 }
 
 .button:hover {
-    box-shadow: 0px 0px 0px black ;
+    box-shadow: 0px 0px 0px black;
     transform: translate(0px, 0px);
     transition: all .1s;
 }
@@ -1166,7 +1179,7 @@ footer a {
     gap: 20px;
 }
 
-.login-screen .form label input{
+.login-screen .form label input {
     width: 450px;
     height: 60px;
     background: #FFFFFF;
@@ -1179,7 +1192,7 @@ footer a {
     outline: none;
 }
 
-.login-screen .form label input:focus{
+.login-screen .form label input:focus {
     outline: 3px solid black;
     outline-offset: -1px;
     background-color: #ffd9d9;
@@ -1206,7 +1219,8 @@ footer a {
 }
 
 .form input[type=submit],
-.sign, .button-theme {
+.sign,
+.button-theme {
     font-size: 35px;
     text-align: center;
     font-weight: 600;
@@ -1222,14 +1236,16 @@ footer a {
 }
 
 .form input[type=submit]:hover,
-.sign:hover , .button-theme:hover{
+.sign:hover,
+.button-theme:hover {
     box-shadow: 0px 0px 0px black;
     transform: translate(0px, 0px);
     transition: all .1s ease;
 }
 
 .form input[type=submit]:active,
-.sign:active, .button-theme:active {
+.sign:active,
+.button-theme:active {
     background: #ffa238;
     transition: all 0.1s ease;
 }
@@ -1240,7 +1256,7 @@ footer a {
     align-items: center;
     justify-content: center;
 } */
-.sign-window{
+.sign-window {
     top: 50px;
     background: #FFFCE1;
     height: 545px;
@@ -1256,28 +1272,30 @@ footer a {
     transition: all .5s;
 }
 
-.sign-window .window-header span{
-    color: white ;
+.sign-window .window-header span {
+    color: white;
 }
 
-.login-screen .window-content{
+.login-screen .window-content {
     width: 100%;
     height: 100%;
     display: flex;
-    justify-content:space-between;
+    justify-content: space-between;
     padding-top: 0px;
     background: #FFED4D;
 }
-.sign-window .left-content{
-    width: 50% ; 
+
+.sign-window .left-content {
+    width: 50%;
     margin-top: 50px;
 }
 
-.sign-window .right-content{
+.sign-window .right-content {
     position: relative;
     width: 50%;
 }
-.sign-window .right-content img{
+
+.sign-window .right-content img {
     mix-blend-mode: darken;
     position: absolute;
     left: 110px;
@@ -1285,13 +1303,14 @@ footer a {
     height: 70%;
     box-sizing: border-box;
 }
-.sign-window .right-content a{
+
+.sign-window .right-content a {
     position: absolute;
     bottom: 25px;
     right: 50px;
 }
 
-.continue-content{
+.continue-content {
     width: 50%;
     height: 100%;
     background: #FFED4D !important;
@@ -1301,18 +1320,21 @@ footer a {
     flex-direction: column;
     gap: 15px;
 }
-.continue-content .user-img{
+
+.continue-content .user-img {
     position: relative;
-    width:60%;
-    height:60%;
+    width: 60%;
+    height: 60%;
 }
-.continue-content .user-img img{
+
+.continue-content .user-img img {
     border-radius: 50%;
     border: 5px solid black;
-    width:100%;
-    height:100%;
+    width: 100%;
+    height: 100%;
 }
-.continue-content .user-img i{
+
+.continue-content .user-img i {
     position: absolute;
     bottom: 15px;
     right: 15px;
@@ -1323,7 +1345,8 @@ footer a {
     border: 5px solid black;
     cursor: pointer;
 }
-.logged-window{
+
+.logged-window {
     position: relative;
     display: flex;
     padding-top: 100px;
@@ -1332,10 +1355,11 @@ footer a {
     width: 100%;
     background: #FFED4D;
 }
+
 /* .logged-window h1{
     
 } */
-.logged-window i{
+.logged-window i {
     bottom: 15px;
     right: 15px;
     font-size: 60px;
@@ -1344,7 +1368,8 @@ footer a {
     background: #C5FFA8;
     border: 5px solid black;
 }
-.logged-window a{
+
+.logged-window a {
     position: absolute;
     bottom: 40px;
 }
@@ -1554,11 +1579,11 @@ form .flex-container input[type=submit] {
 
 }
 
-form .flex-container input[type=submit]:hover{
+form .flex-container input[type=submit]:hover {
     box-shadow: 0px 0px 0px black;
     transform: translate(0px, 0px);
     transition: all .1s;
-    }
+}
 
 
 
@@ -1587,7 +1612,7 @@ form .flex-container input[type=submit]:hover{
     width: 100px;
 }
 
-.bg-illustrations4{
+.bg-illustrations4 {
     position: absolute;
     right: 200px;
     bottom: 600px;
@@ -1597,7 +1622,7 @@ form .flex-container input[type=submit]:hover{
 
 /* ***************************************aboutus.css******************************************* */
 
-.aboutus-div1{
+.aboutus-div1 {
     height: 80vh;
     background-image: url(Images/about-us-bg-orange.svg);
     background-repeat: no-repeat;
@@ -1605,83 +1630,136 @@ form .flex-container input[type=submit]:hover{
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 150px;
+    gap: 120px;
     background-size: cover;
+    margin-top: 60px;
+    margin-bottom: 120px;
 }
-.img-and-card{
+
+.img-and-card {
     display: flex;
     flex-direction: column;
     align-items: center;
-}   
-.img-and-card .char-img{
-    width: 250px;
+}
+
+.img-and-card .char-img {
+    width: 280px;
     border-radius: 50%;
     border: 5px solid black;
     z-index: 2;
-    /* -webkit-filter: grayscale(1); */
 }
-.calling-card{
+
+.calling-card {
     position: relative;
-    top: -200px;
+    top: -190px;
     min-width: 360px;
-    height: 260px ;
+    height: 280px;
     background: white;
     border-radius: 50px;
-    box-shadow: -15px 15px 2px black;
+    box-shadow: -15px 15px 0px black;
     border: 5px solid black;
     padding-top: 191px;
     overflow: hidden;
     transition: all .5s ease;
 }
-.img-and-card:hover .calling-card{
+
+.img-and-card:hover .calling-card {
     height: 425px;
     transition: all .5s ease;
 }
-.calling-card-content{
+
+.calling-card-content {
     padding-top: 15px;
     display: flex;
     flex-direction: column;
     align-items: center;
     border-top: 5px solid black;
     height: 200px;
-    gap: 5px;
-}
-.card-links{
-    display: flex;
-    flex-direction: column;
-    margin-top: 20px;
     gap: 10px;
 }
-.card-links a{
+
+.card-links {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5px;
+    gap: 10px;
+}
+
+.card-links a {
     display: flex;
     align-items: center;
     gap: 5px;
 }
-.card-links a img{
-    height: 35px;
+
+.card-links a img {
+    height: 30px;
 }
 
+.aboutus-header p {
+    font-size: 90px;
+    font-family: montras;
+}
+
+.aboutus-header {
+    text-align: center;
+}
+
+.vision{
+    /* background-image: url(Images/blue-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0px ; */
+    background-color: #A4D2FF;
+    width: 100%;
+    padding: 90px;
+    position: relative;
+    z-index: 1;
+    align-items: center;
+    height: 600px;
 
 
+}
 
+.vision .text{
+width: 750px;
+display: flex;
+flex-direction: column;
+gap: 30px;
+align-items: flex-start;
+z-index: 2;
 
+}
 
+.vision .text p:first-child{
+    font-family:montras;
+    font-size: 80px;
+}
 
+.vision .text p:last-child{
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 129%;
+}
 
+.vision img.sun{
+    position: absolute;
+    left: 0;
+    top: -120px;
+    z-index: -1;
+    width: 500px;
+}
 
+.vision img.gametik{
+    width: 450px;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
+.vision .vision-content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    transform: translateY(-50px);
+}
 
 
 
