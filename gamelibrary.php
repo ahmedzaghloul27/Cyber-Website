@@ -1,47 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/160023570f.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="general.css">
-    <!-- <link rel="stylesheet" href="gamelibrary.css"> -->
-    <link rel = "icon" href = 
-    "Images/icons8-game-64.png" 
-            type = "image/x-icon">
-    <title>Game Library</title>
-</head>
-<<<<<<< HEAD
- 
-<body>
-=======
-
-<body onload="gameLibrary()">
->>>>>>> bb98997a3bcda78a19012091f72867c8224ef281
-    <div class="header-container">
-        <header id="header">
-            <div class="logo-links">
-                <a href="homepage.html">
-                    <img src="Images/logo.png" alt="el-cyber">
-                </a>
-                <ul class="nav-list">
-                    <li><a href="aboutus.html">About us</a></li>
-                    <li><a href="gametik.html">GameTik</a></li>
-                    <li><a href="gamelibrary.html">Browse Library</a></li>
-                </ul>
-            </div>
-            <div class="header-nav-buttons">
-                <button class="request-game-button">
-                    <a href="request.html">Request Game</a>
-                </button>
-                <button>
-                    <a href="login.html">Login</a>
-                </button>
-            </div>
-        </header>
-    </div>
+<?php
+    include_once 'header.php';
+?>
     <div class="library-body">
         <div class="library-header">
             <h1>Game Library</h1>
@@ -260,52 +219,7 @@
             </div>
         </div>
     </div>
-    <div class="footer-container">
-        <div class="social-container">
-            <a href="">
-                <div class="social-icon">
-                    <span class="fa fa-twitter"></span>
-                    <img src="Images/icon-3d-bg.svg" alt="">
-                </div>
-            </a>
-            <a href="">
-                <div class="social-icon">
-                    <span class="fa fa-facebook"></span>
-                    <img src="Images/icon-3d-bg.svg" alt="">
-                </div>
-            </a>
-            <a href="">
-                <div class="social-icon">
-                    <span class="fa fa-instagram"></span>
-                    <img src="Images/icon-3d-bg.svg" alt="">
-                </div>
-            </a>
-        </div>
-        <footer>
-            <div class="footer-left-side">
-                <img src="Images/logo.png" alt="">
-                <ul class="nav-list">
-                    <li><a href="#">CONTACT US</a></li>
-                    <li><a href="#">COOKIES POLICY</a></li>
-                    <li><a href="#">PRIVACY POLICY</a></li>
-                </ul>
-            </div>
-            <div class="footer-right-side">
-                <p>Subscribe to the newsletter</p>
-                <div class="email-and-button">
-                    <input type="email" placeholder="Email">
-                    <a href="">
-                        <svg width="25" height="31" viewBox="0 0 25 31" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1.25 2.12948L23.0851 15.5L1.25 28.8705L1.25 2.12948Z" fill="#FFED4F"
-                                stroke="black" stroke-width="2" />
-                        </svg>
-                    </a>
-                </div>
-            </div>
-        </footer>
-    </div>
 
-    <script src="general.js"></script>
-</body>
-
-</html>
+<?php
+    include_once 'footer.php';
+?>

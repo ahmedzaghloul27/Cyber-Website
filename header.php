@@ -11,8 +11,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="general.css">
-    <link rel="stylesheet" href="homepage.css">
-    <link rel="stylesheet" href="gametik.css">
+
+
     <link rel = "icon" href = 
     "Images/icons8-game-48.png" 
             type = "image/x-icon">
@@ -24,33 +24,22 @@
     <div class="header-container">
         <header id="header">
             <div class="logo-links">
-                <a href="homepage.html">
+                <a href="homepage.php">
                     <img src="Images/logo.png" alt="el-cyber">
                 </a>
                 <ul class="nav-list">
-                    <li><a href="aboutus.html">About us</a></li>
-                    <li><a href="gametik.html">GameTik</a></li>
-                    <li><a href="gamelibrary.html">Browse Library</a></li>
+                    <li><a href="aboutus.php">About us</a></li>
+                    <li><a href="gametik.php">GameTik</a></li>
+                    <li><a href="gamelibrary.php">Browse Library</a></li>
                 </ul>
             </div>
             <div class="header-nav-buttons">
                 <button class="request-game-button">
-                    <a href="request.html">Request Game</a>
+                    <a href="request.php">Request Game</a>
                 </button>
                 <button>
-                    <a href="login.html">Login</a>
+                    <a href="login.php">Login</a>
                 </button>
             </div>
         </header>
     </div>
-    <div class="gametik-conatiner">
-        <div class="game-frame">
-            <iframe seamless="seamless" allowtransparency="true" allowfullscreen="true"
-              frameborder="0" style="width: 100%;height: 100%;border: 0px;" 
-            src="https://zv1y2i8p.play.gamezop.com/g/mKZZW9NXW"> </iframe>
-        </div>
-            <!-- <img src="Images/gametik-frame.svg" alt=""> -->
-    </div>
-</body>
-
-</html>
