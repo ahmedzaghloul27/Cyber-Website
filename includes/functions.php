@@ -12,7 +12,7 @@ function loginUser($conn ,$login ,$password){
     $unameExist = unameExist($conn, $login);
 
     if($emailExist && $unameExist){
-        header('location: ../login.html?loginerror=wronglogin');
+        header('location: ../login.php?login=wronglogin');
         return false;
     }
     if($emailExist !== false){
@@ -25,13 +25,15 @@ function loginUser($conn ,$login ,$password){
 
     if($passwordCheck){
         session_start();
-        $_SESSION["id"] = $userExist['ID'];
+        $_SESSION["user_id"] = $userExist['user_id'];
+        $_SESSION["uname"] = $userExist['uname'];
         $_SESSION["name"] = $userExist['name'];
-        header("location: ../homepage.html");
+        $_SESSION["image_url"] = $userExist['image_url'];
+        header("location: ../homepage.php?logged");
         exit();
     }
     else{
-        header("location: ../login.html?loginerror=wronglogin");
+        header("location: ../login.php?login=wronglogin");
     }
 }
 
@@ -85,7 +87,7 @@ function createUser($conn, $name, $email, $uname, $password, $bdate){
     $stmt = mysqli_stmt_init($conn);
 
     if (!mysqli_stmt_prepare($stmt,$sql)){
-        header("location: ../login.html?error=stmtfailed");
+        header("location: ../login.php?error=stmtfailed");
         exit();
     }
     $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
@@ -93,22 +95,22 @@ function createUser($conn, $name, $email, $uname, $password, $bdate){
     mysqli_stmt_bind_param($stmt, "ssssi", $name, $email, $hashedPassword, $uname,$bdate);
     mysqli_stmt_execute($stmt);
     mysqli_stmt_close($stmt);
-    header("location: ../logged.html?error=none");
+    header("location: ../logged.php?error=none");
     exit();
 }
 function addGame($conn, $title, $description, $genre, $image){
-    $sql = "INSERT INTO games (title,description,genre,image) VALUES (?,?,?,?)";
+    $sql = "INSERT INTO games (title,description,genre,image_url) VALUES (?,?,?,?)";
     $stmt = mysqli_stmt_init($conn);
 
     if (!mysqli_stmt_prepare($stmt,$sql)){
-        header("location: ../login.html?error=stmtfailed");
+        header("location: ../login.php?error=stmtfailed");
         exit();
     }
 
     mysqli_stmt_bind_param($stmt, "sssb", $title, $description, $genre, $image);
     mysqli_stmt_execute($stmt);
     mysqli_stmt_close($stmt);
-    header("location: ../addgame.html?game-add=added");
+    header("location: ../addgame.php?game-add=added");
     exit();
 }
 

@@ -8,12 +8,12 @@ if (isset($_POST['submit'])){
     require_once 'functions.php';
 
     if (emptyInputLogin($login, $password) !== false){
-        header("Location: ../login.html?loginerror=emptyinput");
+        header("Location: ../login.php?login=emptyinput");
         exit();
     }
     loginUser($conn, $login, $password);
 }
 else{
-    header("location: ../login.html");
+    header("location: ../login.php");
     exit();
 }

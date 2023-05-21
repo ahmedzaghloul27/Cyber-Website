@@ -1,5 +1,6 @@
 <?php
     session_start();
+    // var_dump($_SESSION);
 ?>
 
 <!DOCTYPE html>
@@ -38,12 +39,37 @@
                 </ul>
             </div>
             <div class="header-nav-buttons">
-                <button class="request-game-button">
-                    <a href="request.php">Request Game</a>
-                </button>
-                <button>
-                    <a href="login.php">Login</a>
-                </button>
+                <!-- <button class="request-game-button"><a href="request.php">Request Game</a></button> -->
+                <?php
+                if (isset($_SESSION['user_id'])){
+                    $name = $_SESSION['name'];
+                    $uName = $_SESSION['uname'];
+                        echo '
+                        <div class="profile-element">
+                            <div class="profile-header">
+                                <span class="profile-name">' . $uName . '</span>
+                                <img src="images/etsho.jpg" alt="Profile Picture">
+                            </div>
+                            <div class="profile-details">
+                                <a href="profile.php">Notification</a>
+                                <a href="profile.php">Friends</a>
+                                <a href="profile.php">Messages</a>
+                                <a href="profile.php">Profile</a>
+                                <a href="includes/logout.php">Logout</a>
+                            </div>
+                        </div>
+                        ';
+                    }
+                else{
+                        echo '<button><a href="login.php">Login</a></button>';
+                    }
+                ?>
+            <style>
+                .register-error{
+                    display: inline;
+                }
+            </style>
             </div>
         </header>
+
     </div>

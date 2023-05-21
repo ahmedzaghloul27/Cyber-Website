@@ -1,0 +1,67 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="div0">
+        <div class="div1">
+            <span class="right"></span>
+            <span class="left"></span>
+        </div>
+        <div class="div2">
+            <span class="bone">touch me</span>
+        </div>
+    </div>
+    <style>
+        body {
+            background-color: brown;
+        }
+        .div0,
+        .div1 {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .div2 {
+            position: absolute;
+            width: 150px;
+            height: 150px;
+        }
+        
+        .right,
+        .left {
+            height: 150px;
+            width: 150px;
+            background: rgb(253, 253, 206);
+            border-radius: 50%;
+        }
+        
+        .bone {
+            position: absolute;
+            bottom: 0; /* Change from align-self: flex-start; */
+            height: 150px;
+            width: 150px;
+            background: rgb(253, 253, 206);
+            transform: rotate(360deg);
+            transition: all 0.5s ease; /* Added transition */
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            font-size: 25px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        
+        .bone:hover {
+            border-radius: 200px 200px 0 0 ;
+            height: 400px;
+        }
+    </style>
+</body>
+
+</html>

@@ -23,9 +23,9 @@
             <div class="footer-left-side">
                 <img src="Images/logo.png" alt="">
                 <ul class="nav-list">
-                    <li><a href="#">CONTACT US</a></li>
-                    <li><a href="#">COOKIES POLICY</a></li>
-                    <li><a href="#">PRIVACY POLICY</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Request Game</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
                 </ul>
             </div>
             <div class="footer-right-side">

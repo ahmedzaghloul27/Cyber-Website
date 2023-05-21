@@ -16,26 +16,26 @@ if(isset($_POST["submit"])){
      require_once 'functions.php';
 
     if(emptyInputRegister($name, $email, $password)){
-        header("location: ../login.html?error=emptyinput");
+        header("location: ../login.php?error=emptyinput");
         exit();
     }
     if(!validEmail($email)){
-        header("location: ../login.html?error=invalidemail");
+        header("location: ../login.php?error=invalidemail");
         exit();
     }
     if(emailExist($conn, $email)){
-        header("location: ../login.html?error=emailexist");
+        header("location: ../login.php?error=emailexist");
         exit();
     }
     if(unameExist($conn, $uname)){
-        header("location: ../login.html?error=unameexist");
+        header("location: ../login.php?error=unameexist");
         exit();
     }
 
     createUser($conn, $name, $email, $uname, $password, $bdate);
 
 } else{
-    header("location: ../login.html?error=invalidpassword");
+    header("location: ../login.php?error=invalidpassword");
 }
 
 

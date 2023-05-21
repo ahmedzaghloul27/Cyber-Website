@@ -46,6 +46,26 @@
                             <label for="password">
                                 <input type="password" placeholder="Password" name="password" required>
                             </label>
+                            <?php
+            if (isset($_GET['login'])) {
+                if($_GET['login'] == "emptyinput"){
+                    echo    "<i class=\"fa fa-circle-info\" style=\"color:red; font-size:20px\"></i>
+                    <p class=\"register-error\">Fill in all fields</p>";
+                }
+                else if($_GET["login"] == "wronglogin"){
+                    echo "<div>
+                    <i class=\"fa fa-circle-info\" style=\"color:red; font-size:20px; \"></i>
+                    <p class=\"register-error\">Incorrect login information!</p>
+                    </div>";
+                }
+            }
+            ?>
+            <style>
+                .register-error{
+                    font-size: 20px !important;
+                    display: inline;
+                }
+            </style>
                             <a href="#" class="pass"><u>Forgot Password?</u></a>
                             <input type="submit" name="submit" class="hover-effect" value="Login">
                         </div>

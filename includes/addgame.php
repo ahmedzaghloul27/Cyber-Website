@@ -12,6 +12,6 @@ if (isset($_POST['submit'])){
     addGame($conn, $title, $description, $genre, $image);
 }
 else{
-    header("location: ../addgame.html?game-add=failed");
+    header("location: ../addgame.php?game-add=failed");
     exit();
 }
