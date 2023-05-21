@@ -102,7 +102,11 @@
                         <div class="continue-content form">
                             <div class="user-img">
                                 <img src="Images/game-pic.png" alt="">
-                                <i type="file" class="fa-solid fa-pen"></i>
+                                <input type="file" id="profile-image" name="profile-image">
+                                <label for="profile-image">
+                                    <i class="fa-solid fa-pen"></i>
+                                </label>
+                            
                             </div>
                             <label for="uname">
                                 <input type="text" name="uname" id="email" placeholder="User Name"  required>
