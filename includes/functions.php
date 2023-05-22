@@ -82,14 +82,16 @@ function validEmail($email){
 //     return preg_match('/^(01)[0-9]{9}$/', $phone);
 // }
 
-function createUser($conn, $name, $email, $uname, $password, $bdate, $image){
+function createUser($conn, $name, $email, $uname, $password, $bdate, $image, $imageTemp){
     $sql = "INSERT INTO users (name,email,password,uname,bdate, image_url) VALUES (?,?,?,?,?,?)";
     $stmt = mysqli_stmt_init($conn);
-
+    $folder = "images/profile/" . $image;
+    move_uploaded_file($imageTemp, $folder);
     if (!mysqli_stmt_prepare($stmt,$sql)){
         header("location: ../login.php?error=stmtfailed");
         exit();
     }
+    
     $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 
     mysqli_stmt_bind_param($stmt, "ssssis", $name, $email, $hashedPassword, $uname, $bdate, $image);
@@ -106,9 +108,19 @@ function addGame($conn, $title, $description, $genre, $image){
         header("location: ../login.php?error=stmtfailed");
         exit();
     }
-    // if(!$image == ''){
-    //     $image = 'images/profile/default.png';
-    // }
+    $uploadPath = 'images/profile/';
+    $targetFilePath = $uploadPath . $image;
+    $fileType = pathinfo($targetFilePath,PATHINFO_EXTENSION);
+    if(!empty($_FILES["file"]["name"])){
+        // Allow certain file formats
+        $allowTypes = array('jpg','png','jpeg','gif','pdf');
+        if(in_array($fileType, $allowTypes)){
+            if(move_uploaded_file($_FILES["file"]["tmp_name"], $targetFilePath)){
+                $sql = "INSERT INTO games (title,description,genre,image_url) VALUES (?,?,?,?)";
+                $stmt = mysqli_stmt_init($conn);
+            }
+        }
+    }
     mysqli_stmt_bind_param($stmt, "ssss", $title, $description, $genre, $image);
     mysqli_stmt_execute($stmt);
     mysqli_stmt_close($stmt);

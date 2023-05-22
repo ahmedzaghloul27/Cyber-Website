@@ -148,6 +148,7 @@ ul {
   
   .profile-header img {
     height: 60px;
+    width: 60px;
     right: -200px;
     margin: 0;
     border-radius: 50%;
@@ -161,6 +162,9 @@ ul {
     overflow: hidden;
     gap: 10px;
     width: 100%;
+    right: 0px;
+    min-width: 160px;
+    z-index: -10;
     top: 100%;
     background-color: #FFEE50;
     padding: 10px;

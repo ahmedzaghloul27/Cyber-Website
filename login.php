@@ -101,8 +101,8 @@
                         </div>
                         <div class="continue-content form">
                             <div class="user-img">
-                                <img src="images/profile/default.png" alt="" accept="image/*" id="#preview-selected-image">
-                                <input type="file" id="profile-image" name="profile-image"  onchange="previewImage(event);" >
+                                <img src="images/profile/default.png" alt="" accept="image/*"  id="#preview-selected-image" >
+                                <input type="file" id="profile-image"  onchange="previewImage(event);" name="profile-image" >
                                 <script>
                                     const previewImage = (event) => {
                                         const imageFiles = event.target.files;

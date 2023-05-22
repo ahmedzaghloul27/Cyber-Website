@@ -1,5 +1,6 @@
 <?php
     include_once 'header.php';
+    require_once 'includes/dbh.php';
 ?>
     <div class="library-body">
         <div class="library-header">
@@ -28,8 +29,35 @@
         </div>
 
     </div>
-    <div class="genre-container">
-        <div class="genre1">
+    <?php
+        // Fetch all data from the "games" table
+        $query = "SELECT * FROM games";
+        $result = mysqli_query($conn, $query);
+
+        // Create an empty array to store the game cards
+        $gameCards = array();
+
+        // Loop through the fetched rows
+        while ($row = mysqli_fetch_assoc($result)) {
+            // Create a game card object with the necessary properties
+            $gameCard = array(
+                'name' => $row['title'],
+                'image' => $row['image_url'],
+                'genre' => $row['genre']
+            );
+
+            // Add the game card object to the array
+            $gameCards[] = $gameCard;
+        }
+        // Convert the PHP array to JSON
+        $jsonData = json_encode($gameCardss);
+    ?>
+    <script>
+        const gameCards = <?php echo $jsonData; ?>;
+        console.log(gameCards);
+    </script>
+    <div class="genre-container" onload="gameLibrary()">
+        <div class="genre1 action">
             <p>Action</p>
             <button class="right-arrow"><span class="fa fa-caret-right"></span></button>
             <button class="left-arrow"><span class="fa fa-caret-left"></span></button>
@@ -78,7 +106,7 @@
                 </div>
             </div>
         </div>
-        <div class="genre1">
+        <div class="genre1 ">
             <p>Sports and Racing</p>
             <button class="right-arrow"><span class="fa fa-caret-right"></span></button>
             <button class="left-arrow"><span class="fa fa-caret-left"></span></button>
@@ -120,7 +148,7 @@
                 </div>
             </div>
         </div>
-        <div class="genre1 Arcade">
+        <div class="genre1 fun">
             <p>Fun</p>
             <button class="right-arrow"><span class="fa fa-caret-right"></span></button>
             <button class="left-arrow"><span class="fa fa-caret-left"></span></button>
@@ -169,7 +197,7 @@
                 </div>
             </div>
         </div>
-        <div class="genre1">
+        <div class="genre1 adventrure">
             <p>Adventrure</p>
             <button class="right-arrow"><span class="fa fa-caret-right"></span></button>
             <button class="left-arrow"><span class="fa fa-caret-left"></span></button>
