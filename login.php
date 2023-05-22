@@ -72,7 +72,7 @@
                         <p>Login</p>
                     </div>
                 </form>
-                <form class="sign-window" action="includes/signup.php" method="post">
+                <form class="sign-window" action="includes/signup.php" method="post" enctype="multipart/form-data">
                     <div class="window-content">
                         <div class="left-content">
                             <div action="" class="form">
@@ -101,8 +101,19 @@
                         </div>
                         <div class="continue-content form">
                             <div class="user-img">
-                                <img src="Images/game-pic.png" alt="">
-                                <input type="file" id="profile-image" name="profile-image">
+                                <img src="images/profile/default.png" alt="" accept="image/*" id="#preview-selected-image">
+                                <input type="file" id="profile-image" name="profile-image"  onchange="previewImage(event);" >
+                                <script>
+                                    const previewImage = (event) => {
+                                        const imageFiles = event.target.files;
+                                        const imageFilesLength = imageFiles.length;
+                                        if (imageFilesLength > 0) {
+                                            const imageSrc = URL.createObjectURL(imageFiles[0]);
+                                            const imagePreviewElement = document.getElementById("#preview-selected-image");
+                                            imagePreviewElement.src = imageSrc;
+                                        }
+                                    };
+                                </script>
                                 <label for="profile-image">
                                     <i class="fa-solid fa-pen"></i>
                                 </label>

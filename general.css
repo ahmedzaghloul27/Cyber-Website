@@ -154,9 +154,12 @@ ul {
     transition: transform 0.3s;
   }
   
-  .profile-details {
+  .profile-dropdown {
     position: absolute;
+    display: flex;
+    flex-direction: column;
     overflow: hidden;
+    gap: 10px;
     width: 100%;
     top: 100%;
     background-color: #FFEE50;
@@ -166,12 +169,11 @@ ul {
     border-radius: 0 0 15px 15px;
     max-height: 0;
     opacity: 0;
-    /* transition: max-height 0.5s ease, opacity 0.5s ease; */
     transition: all .5s;
   }
   
-  .profile-element:hover .profile-details {
-    max-height: 200px;
+  .profile-element:hover .profile-dropdown {
+    max-height: 300px;
     opacity: 1;
   }
   
@@ -180,11 +182,11 @@ ul {
         height: 0px;
     }
     100%{
-        height: 200px;
+        height: 230px;
     }
 }
 
-.profile-element .profile-details a:hover{
+.profile-element .profile-dropdown a:hover{
     color: #3ba904;
     transition: all .1s;
 }
@@ -1027,7 +1029,7 @@ footer a {
 .illustrations img:first-child {
     position: absolute;
     left: 0px;
-    top: 0px;
+    top: -20px;
     z-index: -1;
 
 }
@@ -1062,7 +1064,7 @@ footer a {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    height: 70vh;
 }
 
 .login-body {
@@ -1408,7 +1410,7 @@ footer a {
     cursor: pointer;
 }
 .continue-content .user-img input[type="file"]{
-    display: none;   
+    display: none;    
 }
 .logged-window {
     position: relative;

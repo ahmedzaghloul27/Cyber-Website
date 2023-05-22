@@ -82,8 +82,8 @@ function validEmail($email){
 //     return preg_match('/^(01)[0-9]{9}$/', $phone);
 // }
 
-function createUser($conn, $name, $email, $uname, $password, $bdate){
-    $sql = "INSERT INTO users (name,email,password,uname,bdate) VALUES (?,?,?,?,?)";
+function createUser($conn, $name, $email, $uname, $password, $bdate, $image){
+    $sql = "INSERT INTO users (name,email,password,uname,bdate, image_url) VALUES (?,?,?,?,?,?)";
     $stmt = mysqli_stmt_init($conn);
 
     if (!mysqli_stmt_prepare($stmt,$sql)){
@@ -92,7 +92,7 @@ function createUser($conn, $name, $email, $uname, $password, $bdate){
     }
     $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 
-    mysqli_stmt_bind_param($stmt, "ssssi", $name, $email, $hashedPassword, $uname,$bdate);
+    mysqli_stmt_bind_param($stmt, "ssssis", $name, $email, $hashedPassword, $uname, $bdate, $image);
     mysqli_stmt_execute($stmt);
     mysqli_stmt_close($stmt);
     header("location: ../logged.php?error=none");
@@ -106,8 +106,10 @@ function addGame($conn, $title, $description, $genre, $image){
         header("location: ../login.php?error=stmtfailed");
         exit();
     }
-
-    mysqli_stmt_bind_param($stmt, "sssb", $title, $description, $genre, $image);
+    // if(!$image == ''){
+    //     $image = 'images/profile/default.png';
+    // }
+    mysqli_stmt_bind_param($stmt, "ssss", $title, $description, $genre, $image);
     mysqli_stmt_execute($stmt);
     mysqli_stmt_close($stmt);
     header("location: ../addgame.php?game-add=added");

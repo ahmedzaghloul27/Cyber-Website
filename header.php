@@ -44,13 +44,14 @@
                 if (isset($_SESSION['user_id'])){
                     $name = $_SESSION['name'];
                     $uName = $_SESSION['uname'];
+                    $imageUrl = $_SESSION['image_url'];
                         echo '
                         <div class="profile-element">
                             <div class="profile-header">
                                 <span class="profile-name">' . $uName . '</span>
-                                <img src="images/etsho.jpg" alt="Profile Picture">
+                                <img src="' . $imageUrl .'" alt="Profile Picture">
                             </div>
-                            <div class="profile-details">
+                            <div class="profile-dropdown">
                                 <a href="profile.php">Notification</a>
                                 <a href="profile.php">Friends</a>
                                 <a href="profile.php">Messages</a>
