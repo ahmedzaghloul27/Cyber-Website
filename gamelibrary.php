@@ -27,7 +27,6 @@
                 </div>
             </div>
         </div>
-
     </div>
     <?php
         // Fetch all data from the "games" table
@@ -50,14 +49,14 @@
             $gameCards[] = $gameCard;
         }
         // Convert the PHP array to JSON
-        $jsonData = json_encode($gameCardss);
+        // $jsonData = json_encode($gameCards);
     ?>
     <script>
         const gameCards = <?php echo $jsonData; ?>;
         console.log(gameCards);
     </script>
-    <div class="genre-container" onload="gameLibrary()">
-        <div class="genre1 action">
+    <div class="genre-container">
+        <div class="genre1">
             <p>Action</p>
             <button class="right-arrow"><span class="fa fa-caret-right"></span></button>
             <button class="left-arrow"><span class="fa fa-caret-left"></span></button>
@@ -106,7 +105,7 @@
                 </div>
             </div>
         </div>
-        <div class="genre1 ">
+        <div class="genre1">
             <p>Sports and Racing</p>
             <button class="right-arrow"><span class="fa fa-caret-right"></span></button>
             <button class="left-arrow"><span class="fa fa-caret-left"></span></button>
@@ -148,7 +147,7 @@
                 </div>
             </div>
         </div>
-        <div class="genre1 fun">
+        <div class="genre1 Arcade">
             <p>Fun</p>
             <button class="right-arrow"><span class="fa fa-caret-right"></span></button>
             <button class="left-arrow"><span class="fa fa-caret-left"></span></button>
@@ -197,7 +196,7 @@
                 </div>
             </div>
         </div>
-        <div class="genre1 adventrure">
+        <div class="genre1">
             <p>Adventrure</p>
             <button class="right-arrow"><span class="fa fa-caret-right"></span></button>
             <button class="left-arrow"><span class="fa fa-caret-left"></span></button>

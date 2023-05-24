@@ -2,45 +2,6 @@ let homeWindow = document.querySelector('.home-window');
 let homeWindowBg = document.querySelector('.home-window-bg');
 let homeWindowBgImages = document.querySelectorAll('.home-window-bg img');
 
-// -----------------add game library
-
-function gameLibrary(){
-    const action = document.querySelector('.action .game-card-container');
-    const fun = document.querySelector('.fun .game-card-container');
-    const adventrure = document.querySelector('.adventrure .game-card-container');
-
-    const gameCards = [
-      { name: 'Game 1', image: 'Images/game1.jpg', genre: action },
-      { name: 'Game 2', image: 'Images/game2.jpg', genre: fun },
-      { name: 'Game 3', image: 'Images/etshov2.jpg', genre: adventrure },
-      { name: 'crazy baby', image: 'Images/etshov2.jpg', genre: fun },
-    ];
-
-    gameCards.forEach((card) => {
-
-      const gameCard = document.createElement('div');
-      gameCard.classList.add('game-card');
-
-      const gameThumb = document.createElement('div');
-      gameThumb.classList.add('game-thumb');
-      const image = document.createElement('img');
-      image.src = card.image;
-      gameThumb.appendChild(image);
-
-      const gameName = document.createElement('h2');
-      gameName.textContent = card.name;
-
-      const downloadButton = document.createElement('button');
-      downloadButton.textContent = 'Download';
-
-      gameCard.appendChild(gameThumb);
-      gameCard.appendChild(gameName);
-      gameCard.appendChild(downloadButton);
-      card.genre.appendChild(gameCard);
-
-    });
-
-}
 
 // -------------------------header---------------------------
 (function () {
@@ -160,5 +121,23 @@ password.onchange = validatePassword;
 confirm_password.onkeyup = validatePassword;
 
 
+//--------------------------------gametik
+let gamtikArrowUp = document.querySelector('.scrolls1');
+let gamtikArrowDown = document.querySelector('.scrolls2');
+let gametikContainer = document.querySelector('.op-frame');
+// let gametikContainer2 = document.querySelector('.gamtik-test');
 
 
+let games = ['<iframe seamless="seamless" allowtransparency="true" allowfullscreen="true" frameborder="0"  src="https://zv1y2i8p.play.gamezop.com/g/H1WmafkP9JQ"> </iframe>',
+'<iframe seamless="seamless" allowtransparency="true" allowfullscreen="true" frameborder="0" style="width: 100%;height: 100%;border: 0px;" src="https://zv1y2i8p.play.gamezop.com/g/mKZZW9NXW"> </iframe>',
+'<iframe seamless="seamless" allowtransparency="true" allowfullscreen="true" frameborder="0" style="width: 100%;height: 100%;border: 0px;" src="https://zv1y2i8p.play.gamezop.com/g/zMxz8LNrp"> </iframe>'
+
+ 
+]
+
+gameContainer.insertAdjacentHTML( 'beforeend', games[0] );
+
+gamtikArrowDown.addEventListener('click',()=>{
+  gameContainer.insertAdjacentHTML( 'beforeend', games[1] );
+  
+})
